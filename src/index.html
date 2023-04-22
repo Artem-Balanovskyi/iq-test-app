@@ -16,18 +16,36 @@
 <!--Header start  -->
 <header class="header">
     <div class="wrapper">
+        <div class="header__basement">
+
+
         <div class="header__wrapper">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#main" class="header__link js-scroll">Главная</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#test-info" class="header__link js-scroll">Информация о тесте</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#test-start" class="header__link yellow js-scroll">пройти тест</a>
+                    </li>
+                </ul>
+                <div class="header__nav-close"></div>
+            </nav>
             <div class="header__burger burger">
                 <span class="burger__line burger__line_first"></span>
                 <span class="burger__line burger__line_second"></span>
                 <span class="burger__line burger__line_third"></span>
             </div>
         </div>
+        </div>
     </div>
 </header>
 <!--Header end  -->
 
-<main class="main">
+<main class="main" id="main">
 
     <!--Proposal start  -->
     <div class="wrapper">
@@ -49,11 +67,11 @@
                     и улучшению финансового <br>
                     благосостояния и личной жизни</p>
             </div>
-            <div class="proposal__arrow">
-                <a href="!#"></a>
+            <div class="proposal__arrow ">
+                <a href="#test-info" class="proposal__arrow__link js-scroll"></a>
             </div>
             <div class="proposal__details">
-                <a href="#!">Подробнее</a>
+                <a href="#test-info" class="proposal__details__link js-scroll">Подробнее</a>
             </div>
         </div>
     </div>
@@ -61,9 +79,9 @@
 
     <!--Quote start  -->
     <div class="shift-content">
-        <div class="wrapper">
+        <div class="wrapper" id="test-info">
             <div class="quote__wrapper">
-                <div class="quote__container">
+                <div class="quote__container" >
                     <div class="quote__img-top"></div>
                     <div class="quote__text-block">
                         <p>Профессиональный</p>
@@ -80,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <!--Quote start  -->
+        <!--Quote end  -->
 
         <!--Advise start  -->
         <div class="wrapper">
@@ -151,6 +169,6 @@
         <!--Details end  -->
     </div>
 </main>
-
+<script src="js/index.js"></script>
 </body>
 </html>
