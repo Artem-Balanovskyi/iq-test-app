@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: "PT Serif", serif;
-    /*font-style: normal;*/
+    font-style: normal;
     font-size: 18px;
     line-height: 58px;
     font-weight: 400;
@@ -77,7 +77,6 @@ img {
 /*Proposal styles start*/
 
 .proposal {
-    /*height: 522px;*/
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -167,8 +166,9 @@ img {
 }
 
 .quote__wrapper {
-    /*position: relative;*/
+    position: relative;
 }
+
 .quote__container {
     display: flex;
     flex-wrap: wrap;
@@ -177,15 +177,13 @@ img {
     height: 339px;
     background: url(../img/quote__bg-img.png) no-repeat center;
     background-size: cover;
-    /*position: absolute;*/
-    /*transform: translateY(-125px);*/
 }
 
 .quote__img-top {
     height: 23px;
     width: 23px;
     background: transparent url(../img/quote__img-top.png) no-repeat;
-    /*position: absolute;*/
+    position: absolute;
     top: 43px;
     left: 24px
 }
@@ -210,7 +208,7 @@ img {
     height: 23px;
     width: 23px;
     background: transparent url(../img/quote__img-bottom.png) no-repeat;
-    /*position: absolute;*/
+    position: absolute;
     right: 29px;
     bottom: 33px;
 }
@@ -221,7 +219,6 @@ img {
 
 .advice__wrapper {
     background: white;
-    /*transform: translateY(220px);*/
 }
 
 .advice__text-block {
@@ -229,7 +226,7 @@ img {
 }
 
 .advice__text-block p {
-    font-family: 'PT Serif',serif;
+    font-family: 'PT Serif', serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.05em;
@@ -284,16 +281,18 @@ img {
 .details__wrapper {
     background: url(../img/details__bg-img.png) no-repeat center;
     /*background-size: cover;*/
-    /*position: relative;*/
+    position: relative;
 }
+
 .details__text-block-1 {
     padding: 56px 0 26px 11px;
 }
+
 .details__text-block-1 p {
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
@@ -301,6 +300,23 @@ img {
 
 .details__text-block-1 p span {
     color: #FFC700;
+}
+
+.details__lightning-right {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    left: 198px;
+    top: 68px;
+    background: url(../img/details__lightning-img-right.png) no-repeat;
+}
+
+.details__lightning-left {
+    position: absolute;
+    width: 127px;
+    height: 227px;
+    top: 280px;
+    background: url(../img/details__lightning-img-left.png) no-repeat;
 }
 
 .details__text-block-2 {
@@ -316,7 +332,7 @@ img {
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #181818;
@@ -352,6 +368,7 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding-bottom: 13px;
 }
 
 .details__copyright-img {
@@ -363,8 +380,6 @@ img {
     width: 10px;
     background: url(../img/details__copyright-img.png) no-repeat;
     background-size: contain;
-    /*color: black;*/
-    /*border: 0.8px solid rgba(255, 255, 255, 0.5);*/
 }
 
 .details__copyright-char {
@@ -374,12 +389,17 @@ img {
     background-size: contain;
 }
 
-.details__copyright-year p{
+.details__copyright-year p {
+    height: 18px;
+    width: 35px;
     font-family: 'Roboto', serif;
-    font-size: 10px;
+    font-size: 7px;
     line-height: 23px;
     letter-spacing: 0.05em;
     color: gray;
+    margin-left: 5px;margin-bottom: 3px;
 }
+
+
 /*Details styles end*/
 
