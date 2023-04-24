@@ -16,11 +16,35 @@
 <!--Header start  -->
 <header class="header">
     <div class="wrapper">
-        <div class="header__wrapper">
-            <div class="header__burger burger">
-                <span class="burger__line burger__line_first"></span>
-                <span class="burger__line burger__line_second"></span>
-                <span class="burger__line burger__line_third"></span>
+        <div class="header__basement">
+            <div class="header__wrapper">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#main" class="header__link js-scroll">Главная</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#test-info" class="header__link js-scroll">Информация о тесте</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#test-start" class="header__link yellow js-scroll">пройти тест</a>
+                        </li>
+                    </ul>
+                    <div class="header__nav-close"></div>
+                </nav>
+                <div class="header__bar">
+                    <div class="header__burger burger">
+                        <span class="burger__line burger__line_first"></span>
+                        <span class="burger__line burger__line_second"></span>
+                        <span class="burger__line burger__line_third"></span>
+                    </div>
+                    <div class="header__brain-img">
+
+                    </div>
+                    <div class="header__title">
+                        <p>тест на определение IQ</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,122 +53,642 @@
 
 <main class="main">
 
-    <!--Proposal start  -->
-    <div class="wrapper">
-        <div class="proposal">
-            <div class="proposal__text-block-1">
-                <p>Пройдите точный и быстрый</p>
-            </div>
-            <div class="proposal__text-block-2">
-                <p>тест на <br> определение <br> iq</p>
-            </div>
-            <div class="proposal__button-wrap">
-                <button class="proposal__button button" type="submit">
-                    <a href="#!" class="proposal__button-text">пройти тест</a>
-                </button>
-            </div>
-            <div class="proposal__text-block-3">
-                <p><span>И получите рекомендации <br>
+    <!--                                  Main page start                                  -->
+
+    <section class="main-page hidden" id="main">
+
+        <!--Proposal start  -->
+        <div class="wrapper">
+            <div class="proposal">
+                <div class="proposal__text-block-1">
+                    <p>Пройдите точный и быстрый</p>
+                </div>
+                <div class="proposal__text-block-2">
+                    <p>тест на <br> определение <br> iq</p>
+                </div>
+                <div class="proposal__button-wrap">
+                    <button class="proposal__button button" type="submit">
+                        <a href="#!" class="proposal__button-text">пройти тест</a>
+                    </button>
+                </div>
+                <div class="proposal__text-block-3">
+                    <p><span>И получите рекомендации <br>
                     по развитию своего интеллекта <br> </span>
-                    и улучшению финансового <br>
-                    благосостояния и личной жизни</p>
-            </div>
-            <div class="proposal__arrow">
-                <a href="!#"></a>
-            </div>
-            <div class="proposal__details">
-                <a href="#!">Подробнее</a>
-            </div>
-        </div>
-    </div>
-    <!--Proposal end  -->
-
-    <!--Quote start  -->
-    <div class="shift-content">
-        <div class="wrapper">
-            <div class="quote__wrapper">
-                <div class="quote__container">
-                    <div class="quote__img-top"></div>
-                    <div class="quote__text-block">
-                        <p>Профессиональный</p>
-                        <p>IQ-тест позволяет не</p>
-                        <p>только определить</p>
-                        <p>коэффициент вашего</p>
-                        <p>интеллекта,</p>
-                        <p>но и выработать список</p>
-                        <p>рекомендаций для</p>
-                        <p>повышения этого</p>
-                        <p>показателя.</p>
-                    </div>
-                    <div class="quote__img-bottom"></div>
+                        и улучшению финансового <br>
+                        благосостояния и личной жизни</p>
+                </div>
+                <div class="proposal__arrow ">
+                    <a href="#test-info" class="proposal__arrow__link js-scroll"></a>
+                </div>
+                <div class="proposal__details">
+                    <a href="#test-info" class="proposal__details__link js-scroll">Подробнее</a>
                 </div>
             </div>
         </div>
+        <!--Proposal end  -->
+
         <!--Quote start  -->
+        <div class="shift-content">
+            <div class="wrapper" id="test-info">
+                <div class="quote__wrapper">
+                    <div class="quote__container">
+                        <div class="quote__img-top"></div>
+                        <div class="quote__text-block">
+                            <p>Профессиональный</p>
+                            <p>IQ-тест позволяет не</p>
+                            <p>только определить</p>
+                            <p>коэффициент вашего</p>
+                            <p>интеллекта,</p>
+                            <p>но и выработать список</p>
+                            <p>рекомендаций для</p>
+                            <p>повышения этого</p>
+                            <p>показателя.</p>
+                        </div>
+                        <div class="quote__img-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Quote end  -->
 
-        <!--Advise start  -->
+            <!--Advise start  -->
+            <div class="wrapper">
+                <div class="advice__wrapper">
+                    <div class="advice__text-block">
+                        <p>Также по результатам теста</p>
+                        <p><span class="uppercase">вы получите</span> подробные</p>
+                        <p><span class="uppercase">советы</span> по определению наиболее</p>
+                        <p>перспективной <span class="uppercase">для вашего</span></p>
+                        <p><span class="uppercase">типа</span><span>интеллекта сферы</span></p>
+                        <p><span class="uppercase">деятельности,</span></p>
+                        <p>которая принесет вам скорейший</p>
+                        <p>финансовый результат.</p>
+                    </div>
+                    <div class="advice__image">
+                        <img src="img/advice__img.png" alt="advice__img">
+                    </div>
+                    <div class="advice__button-wrap">
+                        <button class="advice__button button" type="submit">
+                            <a href="#!" class="advice__button-text">пройти тест</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Advice end  -->
+
+            <!--Details start  -->
+
+            <div class="wrapper">
+                <div class="details__wrapper">
+                    <div class="details__lightning-right">
+
+                    </div>
+                    <div class="details__text-block-1">
+                        <p>Прохождение теста займет у</p>
+                        <p>вас не более <span>12 минут</span>, а его</p>
+                        <p>результаты вы сможете</p>
+                        <p><span>использовать всю жизнь.</span></p>
+                    </div>
+                    <div class="details__lightning-left">
+
+                    </div>
+                    <div class="details__text-block-2">
+                        <p>Профессиональная</p>
+                        <p>интерпретация и детально</p>
+                        <p><span>проработанные</span></p>
+                        <p><span>рекомендации</span> позволят вам</p>
+                        <p>качественно <span>изменить все</span></p>
+                        <p><span>аспекты своей жизни:</span> от</p>
+                        <p>финансового до любовного.</p>
+                    </div>
+                    <div class="details__button-wrap">
+                        <button class="details__button button" type="submit">
+                            <a href="#!" class="details__button-text">пройти тест</a>
+                        </button>
+                    </div>
+                    <div class="details__copyright">
+                        <div class="details__copyright-img">
+                            <div class="details__copyright-char"></div>
+                        </div>
+                        <div class="details__copyright-year">
+                            <p>2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Details end  -->
+        </div>
+    </section>
+
+    <!--                                  Main page end                                  -->
+
+    <!--                                  Tests page start                                  -->
+
+    <section class="tests">
         <div class="wrapper">
-            <div class="advice__wrapper">
-                <div class="advice__text-block">
-                    <p>Также по результатам теста</p>
-                    <p><span class="uppercase">вы получите</span> подробные</p>
-                    <p><span class="uppercase">советы</span> по определению наиболее</p>
-                    <p>перспективной <span class="uppercase">для вашего</span></p>
-                    <p><span class="uppercase">типа</span><span>интеллекта сферы</span></p>
-                    <p><span class="uppercase">деятельности,</span></p>
-                    <p>которая принесет вам скорейший</p>
-                    <p>финансовый результат.</p>
+            <div class="tests__test-wrapper">
+                <div class="test__progress-bar-total">
+                    <div class="test__progress-bar-passed"></div>
                 </div>
-                <div class="advice__image">
-                    <img src="img/advice__img.png" alt="advice__img">
+
+                <!--Question 1-->
+
+                <div class="test-1 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question">Ваш пол:</div>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Мужчина</div>
+                        </label>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Женщина</div>
+                        </label>
+                    </div>
                 </div>
-                <div class="advice__button-wrap">
-                    <button class="advice__button button" type="submit">
-                        <a href="#!" class="advice__button-text">пройти тест</a>
+
+                <!--Question 2-->
+
+                <div class="test-2 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question">Укажите ваш возраст:</div>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">До 18</div>
+                        </label>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">От 18 до 28</div>
+                        </label>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">От 29 до 35</div>
+                        </label>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">От 36</div>
+                        </label>
+                    </div>
+
+                    <!--Question 3-->
+
+                    <div class="test-3 hidden">
+                        <div class="question-wrap">
+                            <div class="test__question">Выберите лишнее:</div>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__answer-bg"></div>
+                                <div class="test__answer-checkmark"></div>
+                                <div class="test__answer-text">Дом</div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__answer-bg"></div>
+                                <div class="test__answer-checkmark"></div>
+                                <div class="test__answer-text">Шалаш</div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__answer-bg"></div>
+                                <div class="test__answer-checkmark"></div>
+                                <div class="test__answer-text">Бунгало</div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__answer-bg"></div>
+                                <div class="test__answer-checkmark"></div>
+                                <div class="test__answer-text">Скамейка</div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__answer-bg"></div>
+                                <div class="test__answer-checkmark"></div>
+                                <div class="test__answer-text">Хижина</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Question 4-->
+
+                <div class="test-4 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question">
+                            <p>Продолжите числовой ряд:</p>
+                            <p>18 20 24 32</p>
+                        </div>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">62</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">48</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">74</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">57</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">60</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">77</div>
+                        </label>
+                    </div>
+                </div>
+
+                <!--Question 5-->
+
+                <div class="test-5 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question mb-20px">
+                            <p>Выберите цвет, который</p>
+                            <p>сейчас наиболее вам </p>
+                            <p>приятен:</p>
+                        </div>
+                        <div class="test__grid-container">
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_grey test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_blue test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_green test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_red test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_yellow test__color-box"></div>
+
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_brown test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_black test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_violet test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_light-blue test__color-box"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Question 6-->
+
+                <div class="test-6 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question mb-20px">
+                            <p>Отдохните пару секунд, еще</p>
+                            <p>раз выберите цвет, который</p>
+                            <p>сейчас наиболее вам
+                                <br> приятен:</p>
+                        </div>
+                        <div class="test__grid-container">
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_grey test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_light-blue test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_brown test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_green test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_black test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_red test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_violet test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_yellow test__color-box"></div>
+                                </div>
+                            </label>
+                            <label class="test__answer color-label">
+                                <input type="checkbox">
+                                <div class="test__color-box-active">
+                                    <div class="test__color-box_blue test__color-box"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Question 7-->
+
+                <div class="test-7 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question">
+                            <p>Какой из городов <br> лишний?</p>
+                        </div>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Вашингтон</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Лондон</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Париж</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Нью-Йорк</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Москва</div>
+                        </label>
+                        <label class="test__answer height-40px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-40px"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">Оттава</div>
+                        </label>
+                    </div>
+                </div>
+
+                <!--Question 8-->
+
+                <div class="test-8 ">
+                    <div class="question-wrap">
+                        <div class="test__question mb-20px">
+                            <p>Выберите правильную фигуру </p>
+                            <p>из четырёх пронумерованных.</p>
+                        </div>
+                        <div class="tests__test-8__img-container"></div>
+                        <div class="tests__test-8__grid-container">
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>1</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>2</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>3</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>4</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Question 9-->
+
+                <div class="test-9 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question">
+                            <p>Вам привычнее и важнее:</p>
+                        </div>
+                        <label class="test__answer height-78px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-78px"></div>
+                            <div class="test__answer-checkmark mr-15px"></div>
+                            <div class="test__answer-text">
+                                <p>Наслаждаться</p>
+                                <p>каждой минутой</p>
+                                <p>проведенного времени</p>
+                            </div>
+                        </label>
+                        <label class="test__answer height-78px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-78px"></div>
+                            <div class="test__answer-checkmark mr-15px"></div>
+                            <div class="test__answer-text">
+                                <p>Быть устремленными</p>
+                                <p>мыслями в будущее</p>
+                            </div>
+                        </label>
+                        <label class="test__answer height-78px">
+                            <input type="checkbox">
+                            <div class="test__answer-bg height-78px"></div>
+                            <div class="test__answer-checkmark mr-15px"></div>
+                            <div class="test__answer-text">
+                                <p>Учитывать в ежедневной</p>
+                                <p>практике прошлый опыт</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!--Question 10-->
+
+                <div class="test-10 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question mb-20px font-size-18px">
+                            <p>Какое определение, по-Вашему,</p>
+                            <p>больше подходит к этому</p>
+                            <p>геометрическому изображению:</p>
+                        </div>
+                        <div class="tests__test-10__img-container"></div>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">
+                                <p>Оно остроконечное</p>
+                            </div>
+                        </label>
+                        <label class="test__answer">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">
+                                <p>Оно устойчиво</p>
+                            </div>
+                        </label>
+                        <label class="test__answer ">
+                            <input type="checkbox">
+                            <div class="test__answer-bg"></div>
+                            <div class="test__answer-checkmark"></div>
+                            <div class="test__answer-text">
+                                <p>Оно-находится в</p>
+                                <p>состоянии равновесия</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!--Question 11-->
+
+                <div class="test-11 hidden">
+                    <div class="question-wrap">
+                        <div class="test__question mb-20px">
+                            <p>Вставьте подходящее <br>число</p>
+                        </div>
+                        <div class="tests__test-11__img-container"></div>
+                        <div class="tests__test-11__separator"></div>
+                        <div class="tests__test-11__grid-container">
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>34</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>36</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>53</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>44</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>66</span>
+                                </div>
+                            </label>
+                            <label class="test__option-label">
+                                <input type="checkbox">
+                                <div class="test__option-checkbox">
+                                    <span>42</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="test__button-wrap">
+                    <button class="test__button button" type="submit">
+                        <a href="#!" class="test__button-text">далее</a>
                     </button>
                 </div>
             </div>
         </div>
-        <!--Advice end  -->
+    </section>
 
-        <!--Details start  -->
+    <!--                                  Tests page end                                  -->
 
-        <div class="wrapper">
-            <div class="details__wrapper">
-                <div class="details__text-block-1">
-                    <p>Прохождение теста займет у</p>
-                    <p>вас не более <span>12 минут</span>, а его</p>
-                    <p>результаты вы сможете</p>
-                    <p><span>использовать всю жизнь.</span></p>
-                </div>
-                <div class="details__text-block-2">
-                    <p>Профессиональная</p>
-                    <p>интерпретация и детально</p>
-                    <p><span>проработанные</span></p>
-                    <p><span>рекомендации</span> позволят вам</p>
-                    <p>качественно <span>изменить все</span></p>
-                    <p><span>аспекты своей жизни:</span> от</p>
-                    <p>финансового до любовного.</p>
-                </div>
-                <div class="details__button-wrap">
-                    <button class="details__button button" type="submit">
-                        <a href="#!" class="details__button-text">пройти тест</a>
-                    </button>
-                </div>
-                <div class="details__copyright">
-                    <div class="details__copyright-img">
-                        <div class="details__copyright-char"></div>
-                    </div>
-                    <div class="details__copyright-year">
-                        <p>2019</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Details end  -->
-    </div>
 </main>
-
+<script src="js/index.js"></script>
 </body>
 </html>
