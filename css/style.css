@@ -825,5 +825,47 @@ img {
     column-gap: 8px;
 }
 
+.test__loading-page__title {
+    margin-bottom: 33px;
+}
+.test__loading-page__title p {
+    font-family: 'PT Serif', serif;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+@keyframes loading-img_spin {
+    0%   {transform: rotate(360deg);}
+}
+
+.tests__loading-page__img-container {
+    height: 68px;
+    width: 65px;
+    background: url("../img/tests__loading-page-img.png") no-repeat;
+    margin-bottom: 33px;
+    animation: loading-img_spin 2s ease-in 1s infinite;
+}
+
+
+.tests__loading-page__text-box {
+    height: 60px;
+    width: 276px;
+}
+
+.tests__loading-page__text-box p {
+    font-family: 'PT Serif', serif;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
 /*                                           Tests page styles end                         */
+
+/*                                           Results page styles start                         */
+
+
+
+/*                                           Results page styles end                         */
 
