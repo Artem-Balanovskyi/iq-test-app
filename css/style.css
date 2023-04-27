@@ -59,7 +59,6 @@ img {
     position: fixed;
     display: flex;
     flex-wrap: wrap;
-    /*align-items: center;*/
     width: 320px;
     height: 46px;
     background: #181818;
@@ -98,25 +97,6 @@ img {
     color: #FFC700;
 }
 
-.header__link {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.header__link.yellow {
-    color: #F4CE0C;
-}
-
-.header__link:hover,
-.header__link:focus,
-.header__link:active {
-    opacity: 75%;
-}
-
 .header__nav {
     width: 320px;
     height: 100%;
@@ -140,10 +120,36 @@ img {
     width: 28px;
     height: 28px;
     position: absolute;
+    cursor: pointer;
     top: 20px;
     right: 20px;
     z-index: 11;
     background: url("../img/header__nav-close-icon.png") no-repeat center;
+}
+
+.header__link {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 27px;
+}
+
+.header__link.yellow {
+    color: #F4CE0C;
+    cursor: pointer;
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active,
+.header__nav-close:hover,
+.header__nav-close:focus,
+.header__nav-close:active {
+    opacity: 75%;
 }
 
 .header__burger {
@@ -229,10 +235,6 @@ img {
     border-radius: 20px;
     border: 1px solid black;
     padding: 0;
-    margin-bottom: 22px;
-}
-
-.proposal__button-text {
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 700;
@@ -241,7 +243,12 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #0D0C11;
+    margin-bottom: 22px;
 }
+
+/*.proposal__button-text {*/
+
+/*}*/
 
 .proposal__text-block-3 p {
     /*font-family: 'PT Serif', serif;*/
@@ -383,10 +390,6 @@ img {
     background: #FFC700;
     border: 1px solid black;
     border-radius: 50px;
-    margin: 0 auto;
-}
-
-.advice__button-text {
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 700;
@@ -395,7 +398,12 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #0D0C11;
+    margin: 0 auto;
 }
+
+/*.advice__button-text {*/
+/*    */
+/*}*/
 
 /*Advice styles end*/
 
@@ -467,10 +475,6 @@ img {
     height: 44px;
     border: 1px solid #FFFFFF;
     border-radius: 50px;
-    margin: 0 auto 52px;
-}
-
-.details__button-text {
     font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: 700;
@@ -479,7 +483,12 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 0 auto 52px;
 }
+
+/*.details__button-text {*/
+
+/*}*/
 
 .details__copyright {
     display: flex;

@@ -23,13 +23,13 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#main" class="header__link js-scroll">Главная</a>
+                            <a href="#main" onclick="showMainPage()" class="header__link js-scroll">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-info" class="header__link js-scroll">Информация о тесте</a>
+                            <a href="#test-info" onclick="showMainPage()" class="header__link js-scroll">Информация о тесте</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-start" class="header__link yellow js-scroll">пройти тест</a>
+                            <a onclick="showTestsPage()" class="header__link yellow">пройти тест</a>
                         </li>
                     </ul>
                     <div class="header__nav-close"></div>
@@ -40,13 +40,13 @@
                         <span class="burger__line burger__line_second"></span>
                         <span class="burger__line burger__line_third"></span>
                     </div>
-                    <div class="header__brain-img">
+                    <div class="header__brain-img hidden">
 
                     </div>
                     <div class="header__test-page-title hidden">
                         <p>тест на определение IQ</p>
                     </div>
-                    <div class="header__result-page-title">
+                    <div class="header__result-page-title hidden">
                         <p>Готово!</p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
 
     <!--                                  Main page start                                  -->
 
-    <section class="main-page hidden" id="main">
+    <section class="main-page" id="main">
 
         <!--Proposal start  -->
         <div class="wrapper">
@@ -72,9 +72,13 @@
                     <p>тест на <br> определение <br> iq</p>
                 </div>
                 <div class="proposal__button-wrap">
-                    <button class="proposal__button button" type="submit">
-                        <a href="#!" class="proposal__button-text">пройти тест</a>
-                    </button>
+<!--                    <button class="proposal__button pass-test-button" type="submit">-->
+<!--                        <a href="#!" class="proposal__button-text">пройти тест</a>-->
+<!--                    </button>-->
+                    <input class="proposal__button pass-test-button"
+                           type="button"
+                           value="пройти тест"
+                    >
                 </div>
                 <div class="proposal__text-block-3">
                     <p><span>И получите рекомендации <br>
@@ -132,9 +136,13 @@
                         <img src="img/advice__img.png" alt="advice__img">
                     </div>
                     <div class="advice__button-wrap">
-                        <button class="advice__button button" type="submit">
-                            <a href="#!" class="advice__button-text">пройти тест</a>
-                        </button>
+<!--                        <button class="advice__button pass-test-button" type="submit">-->
+<!--                            <a href="#!" class="advice__button-text">пройти тест</a>-->
+<!--                        </button>-->
+                        <input class="advice__button pass-test-button"
+                               type="button"
+                               value="пройти тест"
+                        >
                     </div>
                 </div>
             </div>
@@ -162,9 +170,13 @@
                         <p>финансового до любовного.</p>
                     </div>
                     <div class="details__button-wrap">
-                        <button class="details__button button" type="submit">
-                            <a href="#!" class="details__button-text">пройти тест</a>
-                        </button>
+<!--                        <button class="details__button pass-test-button" type="submit">-->
+<!--                            <a href="#!" class="details__button-text">пройти тест</a>-->
+<!--                        </button>-->
+                        <input class="details__button pass-test-button"
+                               type="button"
+                               value="пройти тест"
+                        >
                     </div>
                     <div class="details__copyright">
                         <div class="details__copyright-img">
@@ -185,7 +197,7 @@
 
     <!--                                  Tests page start                                  -->
 
-    <section class="tests hidden">
+    <section class="tests-page hidden">
         <div class="wrapper">
             <div class="tests__test-wrapper">
                 <div class="test__progress-bar-total">
@@ -705,7 +717,7 @@
 
     <!--                                  Results page start                                  -->
 
-    <section class="results-page" id="results">
+    <section class="results-page hidden" id="results">
         <div class="wrapper results__wrapper">
             <div class="results">
                 <div class="results__text-block-1">
@@ -733,7 +745,7 @@
                 </div>
                 <div class="results__text-block-5">
                     <p>Звоните скорее, запись доступна всего</p>
-                    <p><span>10:00</span> минут</p>
+                    <p><span id="results__timer">10:00</span> минут</p>
                 </div>
                 <button class="results__button-wrap" type="submit">
                     <div class="results__button">
