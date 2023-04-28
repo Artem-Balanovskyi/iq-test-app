@@ -73,7 +73,7 @@ img {
     margin-right: 9px;
 }
 
-.header__test-page-title p {
+.header__test-block-title p {
     font-family: 'Yeseva One', cursive;
     font-size: 12px;
     line-height: 14px;
@@ -82,12 +82,12 @@ img {
     color: #FFC700;
 }
 
-.header__result-page-title {
+.header__result-block-title {
     position: absolute;
     margin-left: 110px;
 }
 
-.header__result-page-title p {
+.header__result-block-title p {
     font-family: 'Yeseva One', cursive;
     font-size: 20px;
     line-height: 23px;
@@ -183,14 +183,14 @@ img {
 /*Header styles end*/
 
 
-/*                                           Main page styles start                         */
+/*                                           Main block styles start                         */
 
-/*.page_show {*/
+/*.block_show {*/
 /*    transform: translateY(0);*/
 /*    transition: .2s all linear;*/
 /*}*/
 
-/*.page_hide {*/
+/*.block_hide {*/
 /*    transform: translateY(-1000%);*/
 /*    transition: .2s all linear;*/
 /*}*/
@@ -513,9 +513,9 @@ img {
 
 /*Details styles end*/
 
-/*                                           Main page styles end                         */
+/*                                           Main block styles end                         */
 
-/*                                           Tests page styles start                         */
+/*                                           Tests block styles start                         */
 
 .tests__test-wrapper {
     width: 320px;
@@ -541,7 +541,7 @@ img {
 }
 
 .test__progress-bar-passed {
-    width: 9px;
+    width: 24px;
     height: 11px;
     background: #3BDE7C;
     border-radius: 11px;
@@ -822,11 +822,11 @@ img {
     column-gap: 8px;
 }
 
-.test__loading-page__title {
+.test__loading-block__title {
     margin-bottom: 33px;
 }
 
-.test__loading-page__title p {
+.test__loading-block__title p {
     font-size: 23px;
     letter-spacing: 0.05em;
 }
@@ -837,29 +837,29 @@ img {
     }
 }
 
-.tests__loading-page__img-container {
+.tests__loading-block__img-container {
     height: 68px;
     width: 65px;
-    background: url("../img/tests__loading-page-img.png") no-repeat;
+    background: url("../img/tests__loading-block-img.png") no-repeat;
     margin-bottom: 33px;
     animation: loading-img_spin 2s ease-in 1s infinite;
 }
 
 
-.tests__loading-page__text-box {
+.tests__loading-block__text-box {
     height: 60px;
     width: 276px;
 }
 
-.tests__loading-page__text-box p {
+.tests__loading-block__text-box p {
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 0.05em;
 }
 
-/*                                           Tests page styles end                         */
+/*                                           Tests block styles end                         */
 
-/*                                           Results page styles start                         */
+/*                                           Results block styles start                         */
 .results__wrapper {
     max-height: 676px;
 }
@@ -962,7 +962,7 @@ img {
     background: #EB1B00;
     border-radius: 5px;
     border: none;
-    margin: 0 auto 142px;
+    margin: 0 auto 107px;
     z-index: 5;
 }
 
@@ -999,6 +999,29 @@ img {
     background: url(../img/results__lightning-left.png) no-repeat;
 }
 
+.results__response-data {
+    max-width: 320px;
+    line-height: 25px;
+    padding: 0 15px 15px;
+}
+
+.results__response-data:last-child {
+    margin-bottom: 20px;
+}
+
+.result {
+    text-align: left;
+    max-width: 320px;
+}
+
+.key{
+    text-transform: capitalize;
+}
+
+.value {
+    color: aqua;
+}
+
 .footer {
     position: absolute;
     width: 100%;
@@ -1017,5 +1040,5 @@ img {
 
 
 
-/*                                           Results page styles end                         */
+/*                                           Results block styles end                         */
 
