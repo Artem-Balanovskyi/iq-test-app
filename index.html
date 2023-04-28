@@ -24,14 +24,14 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#main" onclick="showMainPage()" class="header__link js-scroll">Главная</a>
+                            <a href="#main" onclick="showMainBlock()" class="header__link js-scroll">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-info" onclick="showMainPage()" class="header__link js-scroll">Информация о
+                            <a href="#test-info" onclick="showMainBlock()" class="header__link js-scroll">Информация о
                                 тесте</a>
                         </li>
                         <li class="header__item">
-                            <a onclick="showTestsPage()" class="header__link yellow">пройти тест</a>
+                            <a onclick="showTestsBlock()" class="header__link yellow">пройти тест</a>
                         </li>
                     </ul>
                     <div class="header__nav-close"></div>
@@ -45,10 +45,10 @@
                     <div class="header__brain-img hidden">
 
                     </div>
-                    <div class="header__test-page-title hidden">
+                    <div class="header__test-block-title hidden">
                         <p>тест на определение IQ</p>
                     </div>
-                    <div class="header__result-page-title hidden">
+                    <div class="header__result-block-title hidden">
                         <p>Готово!</p>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
 
 <main class="main">
 
-    <!--                                  Main page start                                  -->
+    <!--                                  Main block start                                  -->
 
-    <section class="main-page" id="main">
+    <section class="main-block" id="main">
 
         <!--Proposal start  -->
         <div class="wrapper">
@@ -74,13 +74,10 @@
                     <p>тест на <br> определение <br> iq</p>
                 </div>
                 <div class="proposal__button-wrap">
-                    <!--                    <button class="proposal__button pass-test-button" type="submit">-->
-                    <!--                        <a href="#!" class="proposal__button-text">пройти тест</a>-->
-                    <!--                    </button>-->
                     <input class="proposal__button pass-test-button"
                            type="button"
                            value="пройти тест"
-                           onclick="showTestsPage()"
+                           onclick="showTestsBlock()"
                     >
                 </div>
                 <div class="proposal__text-block-3">
@@ -140,13 +137,10 @@
                         <img src="img/advice__img.png" alt="advice__img">
                     </div>
                     <div class="advice__button-wrap">
-                        <!--                        <button class="advice__button pass-test-button" type="submit">-->
-                        <!--                            <a href="#!" class="advice__button-text">пройти тест</a>-->
-                        <!--                        </button>-->
                         <input class="advice__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsPage()"
+                               onclick="showTestsBlock()"
                         >
                     </div>
                 </div>
@@ -175,13 +169,10 @@
                         <p>финансового до любовного.</p>
                     </div>
                     <div class="details__button-wrap">
-                        <!--                        <button class="details__button pass-test-button" type="submit">-->
-                        <!--                            <a href="#!" class="details__button-text">пройти тест</a>-->
-                        <!--                        </button>-->
                         <input class="details__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsPage()"
+                               onclick="showTestsBlock()"
                         >
                     </div>
                     <div class="details__copyright">
@@ -199,11 +190,11 @@
         </div>
     </section>
 
-    <!--                                  Main page end                                  -->
+    <!--                                  Main block end                                  -->
 
-    <!--                                  Tests page start                                  -->
+    <!--                                  Tests block start                                  -->
 
-    <section class="tests-page hidden">
+    <section class="tests-block hidden">
         <div class="wrapper">
             <div class="tests__test-wrapper">
                 <div class="test__progress-bar-total">
@@ -980,17 +971,17 @@
                     </div>
                 </div>
 
-                <!--                Loading page-->
+                <!--                Loading block-->
 
-                <div class="loading-page hidden">
+                <div class="loading-block hidden">
                     <div class="question-wrap">
-                        <div class="test__loading-page__title">
+                        <div class="test__loading-block__title">
                             <p>Обработка <br>результатов</p>
                         </div>
-                        <div class="tests__loading-page__img-container"></div>
-                        <div class="tests__loading-page__text-box">
+                        <div class="tests__loading-block__img-container"></div>
+                        <div class="tests__loading-block__text-box">
                             <p>Определение стиля мышления...........</p>
-                            <p>....................................................</p>
+                            <p>........................................................</p>
                         </div>
 
                     </div>
@@ -1003,17 +994,16 @@
                            onclick="showNextTest()"
                            disabled
                     >
-                    <!--                           onclick="showTestsPage()"-->
                 </div>
             </div>
         </div>
     </section>
 
-    <!--                                  Tests page end                                  -->
+    <!--                                  Tests block end                                  -->
 
-    <!--                                  Results page start                                  -->
+    <!--                                  Results block start                                  -->
 
-    <section class="results-page hidden" id="results">
+    <section class="results-block hidden" id="results">
         <div class="wrapper results__wrapper">
             <div class="results">
                 <div class="results__text-block-1">
@@ -1043,14 +1033,15 @@
                     <p>Звоните скорее, запись доступна всего</p>
                     <p><span id="results__timer">10:00</span> минут</p>
                 </div>
-                <button class="results__button-wrap" type="submit">
+                <button class="results__button-wrap" type="submit" onclick="renderResults()">
                     <div class="results__button">
-                        <a href="!#">
-                            <p>Позвонить и прослушать</p>
-                            <p>результат </p>
-                        </a>
+                        <p>Позвонить и прослушать</p>
+                        <p>результат </p>
                     </div>
                 </button>
+                <div class="results__response">
+                    <div class="results__response-data"></div>
+                </div>
                 <div class="results__lightning-right"></div>
                 <div class="results__lightning-left"></div>
                 <footer class="footer">
@@ -1064,7 +1055,7 @@
     </section>
 
 
-    <!--                                  Results page end                                  -->
+    <!--                                  Results block end                                  -->
 
 </main>
 <script src="js/index.js"></script>

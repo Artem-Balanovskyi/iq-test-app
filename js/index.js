@@ -58,7 +58,7 @@
 	scrollTo()
 }())
 
-// Results page timer
+// Results block timer
 
 function countdown(elementName, minutes, seconds) {
 	let element, endTime, hours, mins, msLeft, time;
@@ -85,35 +85,48 @@ function countdown(elementName, minutes, seconds) {
 	updateTimer();
 }
 
-// countdown( "results__timer", 10, 0 );
-
 // Pass test buttons
 
-const mainPage = document.querySelector('.main-page')
-const testPage = document.querySelector('.tests-page')
+const mainBlock = document.querySelector('.main-block')
+const testBlock = document.querySelector('.tests-block')
+const resultsBlock = document.querySelector('.results-block')
 const headerBasement = document.querySelector('.header__basement')
 const allCheckboxesArray = document.querySelectorAll('.test__answer-checkbox')
 const nextTestButton = document.querySelector('.test__next-test-button')
+const nextTestButtonWrap = document.querySelector('.test__next-test-button-wrap')
 const headerBrainImg = document.querySelector('.header__brain-img')
-const headerTestPageTitle = document.querySelector('.header__test-page-title')
-const headerResultPageTitle = document.querySelector('.header__result-page-title')
+const headerTestBlockTitle = document.querySelector('.header__test-block-title')
+const headerResultBlockTitle = document.querySelector('.header__result-block-title')
 const passedProgressBar = document.querySelector('.test__progress-bar-passed')
 
-function showMainPage() {
+function showMainBlock() {
 	``
-	testPage.classList.add('hidden')
-	mainPage.classList.remove('hidden')
-	headerTestPageTitle.classList.add('hidden')
+	testBlock.classList.add('hidden')
+	resultsBlock.classList.add('hidden')
+	mainBlock.classList.remove('hidden')
+	headerTestBlockTitle.classList.add('hidden')
+	headerResultBlockTitle.classList.add('hidden')
 	headerBrainImg.classList.add('hidden')
-	headerBasement.style.height = '46'
+	headerBasement.style.height = '46px'
 }
 
-function showTestsPage() {
-	mainPage.classList.add('hidden')
+function showTestsBlock() {
+	mainBlock.classList.add('hidden')
+	resultsBlock.classList.add('hidden')
 	headerBasement.style.height = '0'
-	headerTestPageTitle.classList.remove('hidden')
+	headerResultBlockTitle.classList.add('hidden')
+	headerTestBlockTitle.classList.remove('hidden')
 	headerBrainImg.classList.remove('hidden')
-	testPage.classList.remove('hidden')
+	testBlock.classList.remove('hidden')
+}
+
+function showResultsBlock() {
+	testBlock.classList.add('hidden')
+	// headerBasement.style.height = '46px'
+	headerTestBlockTitle.classList.add('hidden')
+	headerResultBlockTitle.classList.remove('hidden')
+	resultsBlock.classList.remove('hidden')
+	countdown("results__timer", 10, 0);
 }
 
 // Get only one checked checkbox
@@ -137,25 +150,91 @@ let index = 1
 function showNextTest() {
 	const currentTest = document.querySelector(`.test-${index}`)
 	const nextTest = document.querySelector((`.test-${index + 1}`))
+	const loadingBlock = document.querySelector((`.loading-block`))
 	
 	if (index < 11) {
-		allCheckboxesArray.forEach(checkbox => {
-			
-			const answerRecord = `${checkbox.id} : ${checkbox.value}`
-			if (checkbox.checked) {
-				
-				usersTestAnswers.push(answerRecord)
-				console.log(`usersTestAnswers:${usersTestAnswers}`)
-			}
-		})
-		
 		currentTest.classList.add('hidden')
 		nextTest.classList.remove('hidden')
 		nextTestButton.disabled = true
 		nextTestButton.classList.remove('enabled')
-		// passedProgressBar.width = passedProgressBar.width
-		// console.log(`progressBar: ${passedProgressBar.width.value}`)
+	} else {
+		currentTest.classList.add('hidden')
+		loadingBlock.classList.remove('hidden')
+		nextTestButtonWrap.classList.add('hidden')
+		setTimeout(showResultsBlock, 5000)
 	}
 	
+	allCheckboxesArray.forEach(checkbox => {
+		const answerRecord = `${checkbox.id} : ${checkbox.value}`
+		
+		if (checkbox.checked) {
+			usersTestAnswers.push(answerRecord)
+		}
+		
+	})
+	passedProgressBar.style.width = `${21.5 * (index + 1)}px`
 	index++
+	if (index === 12) logUsersTestAnswers(usersTestAnswers)
+	function logUsersTestAnswers (usersTestAnswers) {
+		console.log(`User's test answers:`)
+		usersTestAnswers.forEach(answer => {
+			console.log(`${answer}`)
+		});
+	}
+}
+
+
+const responseDataBlock = document.querySelector('.results__response-data')
+
+async function fetchResults() {
+	let url = 'https://swapi.dev/api/people/1'
+	
+	try {
+		
+		let response = await fetch(url)
+		return await response.json();
+		
+	} catch (error) {
+		responseDataBlock.innerHTML = `
+Sorry, something goes wrong :(<br>
+Try again later.<br>
+${error.name}: ${error.message}
+`
+	
+	}
+}
+
+async function renderResults() {
+	document.querySelector('.results__button-wrap').style.marginBottom = '15px'
+	
+	let data = await fetchResults();
+	console.log(data)
+	let html = '';
+	
+	for (let [key, value] of Object.entries(data)) {
+		function isValueObject(value) {
+			let html = ''
+			if (typeof value === "object") {
+				for (let i = 1; i < value.length; i++) {
+					let htmlSegment = `<p class="value">${value[i]}</p>`
+					html += htmlSegment;
+				}
+				return html
+			}
+			return value
+		}
+		
+		
+		let htmlSegment = `<div class="result">
+<hr>
+ <p class="key">${key}:</p>
+<p class="value">${isValueObject(value)}</p>
+<hr>
+                        </div>`;
+		
+		html += htmlSegment;
+	}
+	
+	
+	responseDataBlock.innerHTML = html;
 }
