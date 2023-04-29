@@ -31,7 +31,7 @@
                                 тесте</a>
                         </li>
                         <li class="header__item">
-                            <a onclick="showTestsBlock()" class="header__link yellow">пройти тест</a>
+                            <a onclick="showTestsOrResults()" class="header__link yellow">пройти тест</a>
                         </li>
                     </ul>
                     <div class="header__nav-close"></div>
@@ -59,10 +59,9 @@
 <!--Header end  -->
 
 <main class="main">
-
     <!--                                  Main block start                                  -->
 
-    <section class="main-block" id="main">
+    <section class="main-block active" id="main">
 
         <!--Proposal start  -->
         <div class="wrapper">
@@ -77,7 +76,7 @@
                     <input class="proposal__button pass-test-button"
                            type="button"
                            value="пройти тест"
-                           onclick="showTestsBlock()"
+                           onclick="showTestsOrResults()"
                     >
                 </div>
                 <div class="proposal__text-block-3">
@@ -140,7 +139,7 @@
                         <input class="advice__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsBlock()"
+                               onclick="showTestsOrResults()"
                         >
                     </div>
                 </div>
@@ -172,7 +171,7 @@
                         <input class="details__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsBlock()"
+                               onclick="showTestsOrResults()"
                         >
                     </div>
                     <div class="details__copyright">
@@ -1015,6 +1014,7 @@
                     <p>15 пунктов отличается от среднего в</p>
                     <p>большую или меньшую сторону!</p>
                 </div>
+                <div class="results__call-us-now">
                 <div class="results__text-block-3">
                     <p>Скорее получите свой</p>
                     <p>результат!</p>
@@ -1031,7 +1031,8 @@
                 </div>
                 <div class="results__text-block-5">
                     <p>Звоните скорее, запись доступна всего</p>
-                    <p><span id="results__timer">10:00</span> минут</p>
+                    <p><span id="results__timer">10:00</span>минут</p>
+                </div>
                 </div>
                 <button class="results__button-wrap" type="submit" onclick="renderResults()">
                     <div class="results__button">

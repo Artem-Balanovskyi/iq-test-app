@@ -1,3 +1,19 @@
+const headerMenu = document.querySelector('.header__nav')
+const mainBlock = document.querySelector('.main-block')
+const testsBlock = document.querySelector('.tests-block')
+const resultsBlock = document.querySelector('.results-block')
+const resultsButton = document.querySelector('.results__button-wrap')
+const resultsButtonText = document.querySelector('.results__button')
+const headerBasement = document.querySelector('.header__basement')
+const allCheckboxesArray = document.querySelectorAll('.test__answer-checkbox')
+const nextTestButton = document.querySelector('.test__next-test-button')
+const nextTestButtonWrap = document.querySelector('.test__next-test-button-wrap')
+const headerBrainImg = document.querySelector('.header__brain-img')
+const headerTestBlockTitle = document.querySelector('.header__test-block-title')
+const headerResultBlockTitle = document.querySelector('.header__result-block-title')
+const passedProgressBar = document.querySelector('.test__progress-bar-passed');
+
+
 // Burger Handler
 
 (function () {
@@ -6,6 +22,7 @@
 	const menuCloseItem = document.querySelector('.header__nav-close')
 	const menuLinks = document.querySelectorAll('.header__link')
 	burgerItem.addEventListener('click', () => {
+		setActiveBlockHeaderMenuHeight()
 		menu.classList.add('header__nav_active')
 	});
 	menuCloseItem.addEventListener('click', () => {
@@ -17,6 +34,20 @@
 		})
 	}
 }());
+
+function setActiveBlockHeaderMenuHeight() {
+	if (mainBlock.classList.contains('active')) {
+		headerMenu.style.height = '100%'
+	}
+	if (testsBlock.classList.contains('active')) {
+		const testsBlockHeight = document.querySelector('.tests__test-wrapper').clientHeight
+		headerMenu.style.height = `${testsBlockHeight}px`
+	}
+	if (resultsBlock.classList.contains('active')) {
+		const resultsBlockHeight = document.querySelector('.results').clientHeight
+		headerMenu.style.height = `${resultsBlockHeight}px`
+	}
+}
 
 // Scroll to anchors
 
@@ -69,8 +100,11 @@ function countdown(elementName, minutes, seconds) {
 	
 	function updateTimer() {
 		msLeft = endTime - (+new Date)
-		if (msLeft < 1000) {
-			element.innerHTML = "Time is up!"
+		if (msLeft < 0) {
+			// resultsTimerText.innerHTML = ''
+			// element.innerHTML = ``
+			resultsButton.disabled = true
+			resultsButtonText.innerHTML = `<p style="padding: 0">Увы,<br> вы не успели :(</p>`
 		} else {
 			time = new Date(msLeft)
 			hours = time.getUTCHours()
@@ -83,50 +117,58 @@ function countdown(elementName, minutes, seconds) {
 	element = document.getElementById(elementName);
 	endTime = (+new Date) + 1000 * (60 * minutes + seconds) + 500;
 	updateTimer();
+	index++
 }
 
 // Pass test buttons
 
-const mainBlock = document.querySelector('.main-block')
-const testBlock = document.querySelector('.tests-block')
-const resultsBlock = document.querySelector('.results-block')
-const headerBasement = document.querySelector('.header__basement')
-const allCheckboxesArray = document.querySelectorAll('.test__answer-checkbox')
-const nextTestButton = document.querySelector('.test__next-test-button')
-const nextTestButtonWrap = document.querySelector('.test__next-test-button-wrap')
-const headerBrainImg = document.querySelector('.header__brain-img')
-const headerTestBlockTitle = document.querySelector('.header__test-block-title')
-const headerResultBlockTitle = document.querySelector('.header__result-block-title')
-const passedProgressBar = document.querySelector('.test__progress-bar-passed')
-
 function showMainBlock() {
 	``
-	testBlock.classList.add('hidden')
+	testsBlock.classList.add('hidden')
+	testsBlock.classList.remove('active')
 	resultsBlock.classList.add('hidden')
+	resultsBlock.classList.remove('active')
 	mainBlock.classList.remove('hidden')
+	mainBlock.classList.add('active')
 	headerTestBlockTitle.classList.add('hidden')
 	headerResultBlockTitle.classList.add('hidden')
 	headerBrainImg.classList.add('hidden')
 	headerBasement.style.height = '46px'
 }
 
+function showTestsOrResults() {
+	if (index === 13) {
+		showResultsBlock()
+	} else {
+		showTestsBlock()
+	}
+}
+
 function showTestsBlock() {
 	mainBlock.classList.add('hidden')
+	mainBlock.classList.remove('active')
 	resultsBlock.classList.add('hidden')
+	resultsBlock.classList.remove('active')
 	headerBasement.style.height = '0'
 	headerResultBlockTitle.classList.add('hidden')
 	headerTestBlockTitle.classList.remove('hidden')
 	headerBrainImg.classList.remove('hidden')
-	testBlock.classList.remove('hidden')
+	testsBlock.classList.remove('hidden')
+	testsBlock.classList.add('active')
 }
 
 function showResultsBlock() {
-	testBlock.classList.add('hidden')
-	// headerBasement.style.height = '46px'
+	mainBlock.classList.add('hidden')
+	mainBlock.classList.remove('active')
+	testsBlock.classList.add('hidden')
+	testsBlock.classList.remove('active')
+	headerBasement.style.height = '0px'
 	headerTestBlockTitle.classList.add('hidden')
 	headerResultBlockTitle.classList.remove('hidden')
 	resultsBlock.classList.remove('hidden')
-	countdown("results__timer", 10, 0);
+	resultsBlock.classList.add('active')
+	
+	if (index < 13) countdown("results__timer", 10, 0);
 }
 
 // Get only one checked checkbox
@@ -174,8 +216,10 @@ function showNextTest() {
 	})
 	passedProgressBar.style.width = `${21.5 * (index + 1)}px`
 	index++
+	
 	if (index === 12) logUsersTestAnswers(usersTestAnswers)
-	function logUsersTestAnswers (usersTestAnswers) {
+	
+	function logUsersTestAnswers(usersTestAnswers) {
 		console.log(`User's test answers:`)
 		usersTestAnswers.forEach(answer => {
 			console.log(`${answer}`)
@@ -204,27 +248,25 @@ ${error.name}: ${error.message}
 	}
 }
 
+function isValueObject(value) {
+	let html = ''
+	if (typeof value === "object") {
+		for (let i = 1; i < value.length; i++) {
+			let htmlSegment = `<p class="value">${value[i]}</p>`
+			html += htmlSegment;
+		}
+		return html
+	}
+	return value
+}
+
 async function renderResults() {
 	document.querySelector('.results__button-wrap').style.marginBottom = '15px'
 	
 	let data = await fetchResults();
-	console.log(data)
 	let html = '';
 	
 	for (let [key, value] of Object.entries(data)) {
-		function isValueObject(value) {
-			let html = ''
-			if (typeof value === "object") {
-				for (let i = 1; i < value.length; i++) {
-					let htmlSegment = `<p class="value">${value[i]}</p>`
-					html += htmlSegment;
-				}
-				return html
-			}
-			return value
-		}
-		
-		
 		let htmlSegment = `<div class="result">
 <hr>
  <p class="key">${key}:</p>
@@ -235,6 +277,8 @@ async function renderResults() {
 		html += htmlSegment;
 	}
 	
+	resultsButton.innerHTML = '<p>Ваш результат:</p>'
+	document.querySelector('.results__call-us-now').classList.add('hidden')
 	
 	responseDataBlock.innerHTML = html;
 }
