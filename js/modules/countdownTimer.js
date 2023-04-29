@@ -3,17 +3,15 @@ const resultsButton = document.querySelector('.results__button-wrap')
 const resultsButtonText = document.querySelector('.results__button')
 
 export function countdownTimer(elementName, minutes, seconds) {
-	let element, endTime, hours, mins, msLeft, time;
+	let element, endTime, hours, mins, msLeft, time
 	
 	function twoDigits(n) {
-		return (n <= 9 ? "0" + n : n);
+		return (n <= 9 ? "0" + n : n)
 	}
 	
 	function updateTimer() {
 		msLeft = endTime - (+new Date)
 		if (msLeft < 0) {
-			// resultsTimerText.innerHTML = ''
-			// element.innerHTML = ``
 			resultsButton.disabled = true
 			resultsButtonText.innerHTML = `<p style="padding: 0">Увы,<br> вы не успели :(</p>`
 		} else {
@@ -25,7 +23,7 @@ export function countdownTimer(elementName, minutes, seconds) {
 		}
 	}
 	
-	element = document.getElementById(elementName);
-	endTime = (+new Date) + 1000 * (60 * minutes + seconds) + 500;
-	updateTimer();
+	element = document.getElementById(elementName)
+	endTime = (+new Date) + 1000 * (60 * minutes + seconds) + 500
+	updateTimer()
 }

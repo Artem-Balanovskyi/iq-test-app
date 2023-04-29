@@ -1,10 +1,10 @@
-import {showResultsBlock} from "./blockVisibility.js";
+import {showResultsBlock} from "./blockVisibility.js"
+import {hideElements, showElements} from "./helpers.js"
 
 const allCheckboxesArray = document.querySelectorAll('.test__answer-checkbox')
 const nextTestButton = document.querySelector('.test__next-test-button')
 const nextTestButtonWrap = document.querySelector('.test__next-test-button-wrap')
-const passedProgressBar = document.querySelector('.test__progress-bar-passed');
-
+const passedProgressBar = document.querySelector('.test__progress-bar-passed')
 
 export let index = 1
 let usersTestAnswers = []
@@ -14,14 +14,13 @@ export function switchToNextTest() {
 	const loadingBlock = document.querySelector((`.loading-block`))
 	
 	if (index < 11) {
-		currentTest.classList.add('hidden')
-		nextTest.classList.remove('hidden')
+		hideElements(currentTest)
+		showElements(nextTest)
 		nextTestButton.disabled = true
 		nextTestButton.classList.remove('enabled')
 	} else {
-		currentTest.classList.add('hidden')
-		loadingBlock.classList.remove('hidden')
-		nextTestButtonWrap.classList.add('hidden')
+		hideElements(currentTest, nextTestButtonWrap)
+		showElements(loadingBlock)
 		setTimeout(showResultsBlock, 5000)
 	}
 	

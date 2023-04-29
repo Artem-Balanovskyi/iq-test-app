@@ -1,4 +1,5 @@
-import {countdownTimer} from "./countdownTimer.js";
+import {countdownTimer} from "./countdownTimer.js"
+import {showElements, hideElements} from "./helpers.js"
 
 const mainBlock = document.querySelector('.main-block')
 const testsBlock = document.querySelector('.tests-block')
@@ -9,28 +10,6 @@ const headerResultBlockTitle = document.querySelector('.header__result-block-tit
 const headerBasement = document.querySelector('.header__basement')
 
 let index = 1
-
-function activateBlocks(...blocks) {
-	blocks.forEach(block => {
-		block.classList.remove('hidden')
-		block.classList.add('active')
-	})
-}
-
-function deactivateBlocks(...blocks) {
-	blocks.forEach(block => {
-		block.classList.add('hidden')
-		block.classList.remove('active')
-	})
-}
-
-function hideElements(...elements) {
-	elements.forEach(element => element.classList.add('hidden'))
-}
-
-function showElements(...elements) {
-	elements.forEach(element => element.classList.remove('hidden'))
-}
 
 export function showMainBlock() {
 	deactivateBlocks(testsBlock, resultsBlock)
@@ -67,4 +46,18 @@ export function showResultsBlock() {
 		countdownTimer("results__timer", 10, 0);
 		index++
 	}
+}
+
+function activateBlocks(...blocks) {
+	blocks.forEach(block => {
+		block.classList.remove('hidden')
+		block.classList.add('active')
+	})
+}
+
+function deactivateBlocks(...blocks) {
+	blocks.forEach(block => {
+		block.classList.add('hidden')
+		block.classList.remove('active')
+	})
 }
