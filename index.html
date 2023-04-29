@@ -24,14 +24,14 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#main" onclick="showMainBlock()" class="header__link js-scroll">Главная</a>
+                            <a href="#main" onclick="window._allImportedFunctions.showMainBlock()" class="header__link js-scroll">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-info" onclick="showMainBlock()" class="header__link js-scroll">Информация о
+                            <a href="#test-info" onclick="window._allImportedFunctions.showMainBlock()" class="header__link js-scroll">Информация о
                                 тесте</a>
                         </li>
                         <li class="header__item">
-                            <a onclick="showTestsOrResults()" class="header__link yellow">пройти тест</a>
+                            <a onclick="window._allImportedFunctions.showTestsOrResults()" class="header__link yellow">пройти тест</a>
                         </li>
                     </ul>
                     <div class="header__nav-close"></div>
@@ -76,7 +76,7 @@
                     <input class="proposal__button pass-test-button"
                            type="button"
                            value="пройти тест"
-                           onclick="showTestsOrResults()"
+                           onclick="window._allImportedFunctions.showTestsOrResults()"
                     >
                 </div>
                 <div class="proposal__text-block-3">
@@ -139,7 +139,7 @@
                         <input class="advice__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsOrResults()"
+                               onclick="window._allImportedFunctions.showTestsOrResults()"
                         >
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                         <input class="details__button pass-test-button"
                                type="button"
                                value="пройти тест"
-                               onclick="showTestsOrResults()"
+                               onclick="window._allImportedFunctions.showTestsOrResults()"
                         >
                     </div>
                     <div class="details__copyright">
@@ -210,7 +210,7 @@
                                    value="Мужчина"
                                    class="test__answer-checkbox"
                                    id="question-1__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -221,7 +221,7 @@
                                    value="Женщина"
                                    class="test__answer-checkbox"
                                    id="question-1__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -240,7 +240,7 @@
                                    value="До 18"
                                    class="test__answer-checkbox"
                                    id="question-2__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -251,7 +251,7 @@
                                    value="От 18 до 28"
                                    class="test__answer-checkbox"
                                    id="question-2__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -262,7 +262,7 @@
                                    value="От 29 до 35"
                                    class="test__answer-checkbox"
                                    id="question-2__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -273,7 +273,7 @@
                                    value="От 36"
                                    class="test__answer-checkbox"
                                    id="question-2__answer-4"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -292,7 +292,7 @@
                                    value="Дом"
                                    class="test__answer-checkbox"
                                    id="question-3__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -303,7 +303,7 @@
                                    value="Шалаш"
                                    class="test__answer-checkbox"
                                    id="question-3__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -314,7 +314,7 @@
                                    value="Бунгало"
                                    class="test__answer-checkbox"
                                    id="question-3__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -325,7 +325,7 @@
                                    value="Скамейка"
                                    class="test__answer-checkbox"
                                    id="question-3__answer-4"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -336,7 +336,7 @@
                                    value="Хижина"
                                    class="test__answer-checkbox"
                                    id="question-3__answer-5"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -358,7 +358,7 @@
                                    value="62"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -369,7 +369,7 @@
                                    value="48"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -380,7 +380,7 @@
                                    value="74"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -391,7 +391,7 @@
                                    value="57"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-4"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -402,7 +402,7 @@
                                    value="60"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-5"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -413,7 +413,7 @@
                                    value="77"
                                    class="test__answer-checkbox"
                                    id="question-4__answer-6"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -428,8 +428,7 @@
                     <div class="question-wrap">
                         <div class="test__question mb-20px">
                             <p>Выберите цвет, который</p>
-                            <p>сейчас наиболее вам </p>
-                            <p>приятен:</p>
+                            <p>сейчас наиболее вам <br>приятен:</p>
                         </div>
                         <div class="test__grid-container">
                             <label class="test__answer color-label">
@@ -437,7 +436,7 @@
                                        value="серый"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-1"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_grey test__color-box"></div>
@@ -448,7 +447,7 @@
                                        value="синий"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-2"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_blue test__color-box"></div>
@@ -459,7 +458,7 @@
                                        value="зеленый"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-3"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_green test__color-box"></div>
@@ -470,7 +469,7 @@
                                        value="красный"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-4"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_red test__color-box"></div>
@@ -481,7 +480,7 @@
                                        value="желтый"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-5"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_yellow test__color-box"></div>
@@ -503,7 +502,7 @@
                                        value="черный"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-7"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_black test__color-box"></div>
@@ -514,7 +513,7 @@
                                        value="фиолетовый"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-8"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_violet test__color-box"></div>
@@ -525,7 +524,7 @@
                                        value="голубой"
                                        class="test__answer-checkbox"
                                        id="question-5__answer-9"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_light-blue test__color-box"></div>
@@ -542,8 +541,7 @@
                         <div class="test__question mb-20px">
                             <p>Отдохните пару секунд, еще</p>
                             <p>раз выберите цвет, который</p>
-                            <p>сейчас наиболее вам
-                                <br> приятен:</p>
+                            <p>сейчас наиболее вам <br>приятен:</p>
                         </div>
                         <div class="test__grid-container">
                             <label class="test__answer color-label">
@@ -551,7 +549,7 @@
                                        value="серый"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-1"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_grey test__color-box"></div>
@@ -562,7 +560,7 @@
                                        value="голубой"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-2"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_light-blue test__color-box"></div>
@@ -573,7 +571,7 @@
                                        value="коричневый"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-3"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_brown test__color-box"></div>
@@ -584,7 +582,7 @@
                                        value="зеленый"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-4"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_green test__color-box"></div>
@@ -595,7 +593,7 @@
                                        value="черный"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-5"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_black test__color-box"></div>
@@ -606,7 +604,7 @@
                                        value="красный"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-6"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_red test__color-box"></div>
@@ -617,7 +615,7 @@
                                        value="фиолетовый"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-7"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_violet test__color-box"></div>
@@ -628,7 +626,7 @@
                                        value="желтый"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-8"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_yellow test__color-box"></div>
@@ -639,7 +637,7 @@
                                        value="синий"
                                        class="test__answer-checkbox"
                                        id="question-6__answer-9"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__color-box-active">
                                     <div class="test__color-box_blue test__color-box"></div>
@@ -661,7 +659,7 @@
                                    value="Вашингтон"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -672,7 +670,7 @@
                                    value="Лондон"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -683,7 +681,7 @@
                                    value="Париж"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -694,7 +692,7 @@
                                    value="Нью-Йорк"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-4"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -705,7 +703,7 @@
                                    value="Москва"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-5"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -716,7 +714,7 @@
                                    value="Оттава"
                                    class="test__answer-checkbox"
                                    id="question-7__answer-6"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-40px"></div>
                             <div class="test__answer-checkmark"></div>
@@ -740,7 +738,7 @@
                                        value="1"
                                        class="test__answer-checkbox"
                                        id="question-8__answer-1"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox"
                                 >
@@ -752,7 +750,7 @@
                                        value="2"
                                        class="test__answer-checkbox"
                                        id="question-8__answer-2"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>2</span>
@@ -763,7 +761,7 @@
                                        value="3"
                                        class="test__answer-checkbox"
                                        id="question-8__answer-3"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>3</span>
@@ -774,7 +772,7 @@
                                        value="4"
                                        class="test__answer-checkbox"
                                        id="question-8__answer-4"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>4</span>
@@ -796,7 +794,7 @@
                                    value="Наслаждаться каждой минутой проведенного времени"
                                    class="test__answer-checkbox"
                                    id="question-9__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-78px"></div>
                             <div class="test__answer-checkmark mr-15px"></div>
@@ -811,7 +809,7 @@
                                    value="Быть устремленными мыслями в будущее"
                                    class="test__answer-checkbox"
                                    id="question-9__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-78px"></div>
                             <div class="test__answer-checkmark mr-15px"></div>
@@ -825,7 +823,7 @@
                                    value="Учитывать в ежедневной практике прошлый опыт"
                                    class="test__answer-checkbox"
                                    id="question-9__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg height-78px"></div>
                             <div class="test__answer-checkmark mr-15px"></div>
@@ -852,7 +850,7 @@
                                    value="Оно остроконечное"
                                    class="test__answer-checkbox"
                                    id="question-10__answer-1"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -865,7 +863,7 @@
                                    value="Оно устойчиво"
                                    class="test__answer-checkbox"
                                    id="question-10__answer-2"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -878,7 +876,7 @@
                                    value="Оно-находится в состоянии равновесия"
                                    class="test__answer-checkbox"
                                    id="question-10__answer-3"
-                                   onclick="checkOnlyOneCheckbox(this.id)"
+                                   onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                             >
                             <div class="test__answer-bg"></div>
                             <div class="test__answer-checkmark"></div>
@@ -905,7 +903,7 @@
                                        value="34"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-1"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>34</span>
@@ -916,7 +914,7 @@
                                        value="36"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-2"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>36</span>
@@ -927,7 +925,7 @@
                                        value="53"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-3"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>53</span>
@@ -938,7 +936,7 @@
                                        value="44"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-4"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>44</span>
@@ -949,7 +947,7 @@
                                        value="66"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-5"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>66</span>
@@ -960,7 +958,7 @@
                                        value="42"
                                        class="test__answer-checkbox"
                                        id="question-11__answer-6"
-                                       onclick="checkOnlyOneCheckbox(this.id)"
+                                       onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                 >
                                 <div class="test__option-checkbox">
                                     <span>42</span>
@@ -990,7 +988,7 @@
                     <input class="test__next-test-button"
                            type="button"
                            value="далее"
-                           onclick="showNextTest()"
+                           onclick="window._allImportedFunctions.switchToNextTest()"
                            disabled
                     >
                 </div>
@@ -1015,26 +1013,26 @@
                     <p>большую или меньшую сторону!</p>
                 </div>
                 <div class="results__call-us-now">
-                <div class="results__text-block-3">
-                    <p>Скорее получите свой</p>
-                    <p>результат!</p>
-                </div>
-                <div class="results__text-block-4-wrap">
-                    <div class="results__text-block-4">
-                        <p>в целях защиты персональных</p>
-                        <p>данных результат теста, их</p>
-                        <p>подробная интерпретация и</p>
-                        <p>рекомендации доступны в виде</p>
-                        <p>голосового сообщения по звонку с</p>
-                        <p>вашего мобильного телефона</p>
+                    <div class="results__text-block-3">
+                        <p>Скорее получите свой</p>
+                        <p>результат!</p>
+                    </div>
+                    <div class="results__text-block-4-wrap">
+                        <div class="results__text-block-4">
+                            <p>в целях защиты персональных</p>
+                            <p>данных результат теста, их</p>
+                            <p>подробная интерпретация и</p>
+                            <p>рекомендации доступны в виде</p>
+                            <p>голосового сообщения по звонку с</p>
+                            <p>вашего мобильного телефона</p>
+                        </div>
+                    </div>
+                    <div class="results__text-block-5">
+                        <p>Звоните скорее, запись доступна всего</p>
+                        <p><span id="results__timer">10:00</span> минут</p>
                     </div>
                 </div>
-                <div class="results__text-block-5">
-                    <p>Звоните скорее, запись доступна всего</p>
-                    <p><span id="results__timer">10:00</span>минут</p>
-                </div>
-                </div>
-                <button class="results__button-wrap" type="submit" onclick="renderResults()">
+                <button class="results__button-wrap" type="submit" onclick="window._allImportedFunctions.renderResults()">
                     <div class="results__button">
                         <p>Позвонить и прослушать</p>
                         <p>результат </p>
@@ -1059,6 +1057,6 @@
     <!--                                  Results block end                                  -->
 
 </main>
-<script src="js/index.js"></script>
+<script type="module" src="js/index.js"></script>
 </body>
 </html>

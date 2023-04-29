@@ -185,16 +185,6 @@ img {
 
 /*                                           Main block styles start                         */
 
-/*.block_show {*/
-/*    transform: translateY(0);*/
-/*    transition: .2s all linear;*/
-/*}*/
-
-/*.block_hide {*/
-/*    transform: translateY(-1000%);*/
-/*    transition: .2s all linear;*/
-/*}*/
-
 /*Proposal styles start*/
 
 .proposal {
@@ -558,6 +548,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 0.05em;
