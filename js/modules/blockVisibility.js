@@ -1,7 +1,4 @@
-
 import {countdownTimer} from "./countdownTimer.js";
-
-let index = 1
 
 const mainBlock = document.querySelector('.main-block')
 const testsBlock = document.querySelector('.tests-block')
@@ -11,17 +8,35 @@ const headerTestBlockTitle = document.querySelector('.header__test-block-title')
 const headerResultBlockTitle = document.querySelector('.header__result-block-title')
 const headerBasement = document.querySelector('.header__basement')
 
+let index = 1
+
+function activateBlocks(...blocks) {
+	blocks.forEach(block => {
+		block.classList.remove('hidden')
+		block.classList.add('active')
+	})
+}
+
+function deactivateBlocks(...blocks) {
+	blocks.forEach(block => {
+		block.classList.add('hidden')
+		block.classList.remove('active')
+	})
+}
+
+function hideElements(...elements) {
+	elements.forEach(element => element.classList.add('hidden'))
+}
+
+function showElements(...elements) {
+	elements.forEach(element => element.classList.remove('hidden'))
+}
+
 export function showMainBlock() {
-	testsBlock.classList.add('hidden')
-	testsBlock.classList.remove('active')
-	resultsBlock.classList.add('hidden')
-	resultsBlock.classList.remove('active')
-	mainBlock.classList.remove('hidden')
-	mainBlock.classList.add('active')
-	headerTestBlockTitle.classList.add('hidden')
-	headerResultBlockTitle.classList.add('hidden')
-	headerBrainImg.classList.add('hidden')
+	deactivateBlocks(testsBlock, resultsBlock)
+	hideElements(headerTestBlockTitle, headerResultBlockTitle, headerBrainImg)
 	headerBasement.style.height = '46px'
+	activateBlocks(mainBlock)
 }
 
 export function showTestsOrResults() {
@@ -33,28 +48,19 @@ export function showTestsOrResults() {
 }
 
 export function showTestsBlock() {
-	mainBlock.classList.add('hidden')
-	mainBlock.classList.remove('active')
-	resultsBlock.classList.add('hidden')
-	resultsBlock.classList.remove('active')
+	deactivateBlocks(mainBlock, resultsBlock)
 	headerBasement.style.height = '0'
-	headerResultBlockTitle.classList.add('hidden')
-	headerTestBlockTitle.classList.remove('hidden')
-	headerBrainImg.classList.remove('hidden')
-	testsBlock.classList.remove('hidden')
-	testsBlock.classList.add('active')
+	hideElements(headerResultBlockTitle)
+	showElements(headerTestBlockTitle, headerBrainImg)
+	activateBlocks(testsBlock)
 }
 
 export function showResultsBlock() {
-	mainBlock.classList.add('hidden')
-	mainBlock.classList.remove('active')
-	testsBlock.classList.add('hidden')
-	testsBlock.classList.remove('active')
-	headerBasement.style.height = '0px'
-	headerTestBlockTitle.classList.add('hidden')
-	headerResultBlockTitle.classList.remove('hidden')
-	resultsBlock.classList.remove('hidden')
-	resultsBlock.classList.add('active')
+	deactivateBlocks(mainBlock, testsBlock)
+	headerBasement.style.height = '0'
+	hideElements(headerTestBlockTitle)
+	showElements(headerResultBlockTitle)
+	activateBlocks(resultsBlock)
 	
 	console.log(`index: ${index}`)
 	if (index < 2) {
