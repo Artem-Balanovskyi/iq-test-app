@@ -20,9 +20,18 @@ const testsData = {
 	thirdTestAnswers: ['Дом', 'Шалаш', 'Бунгало', 'Скамейка', 'Хижина'],
 	fourthTestQuestion: `<p>Продолжите числовой ряд:</p><p>18 20 24 32</p>`,
 	fourthTestAnswers: ['62', '48', '74', '57', '60', '77'],
+	fifthTestQuestion: `<p>Выберите цвет, который</p><p>сейчас наиболее вам <br>приятен:</p>`,
+	fifthTestAnswers: ['grey', 'blue', 'green', 'red', 'yellow', 'brown', 'black', 'violet', 'light-blue'],
+	sixthTestQuestion: `<p>Отдохните пару секунд, еще</p><p>раз выберите цвет, который</p><p>сейчас наиболее вам <br>приятен:</p>`,
+	sixthTestAnswers: ['grey', 'light-blue', 'brown', 'green', 'black', 'red', 'violet', 'yellow', 'blue'],
+	seventhTestQuestion: `<p>Какой из городов <br> лишний?</p>`,
+	seventhTestAnswers: ['Вашингтон', 'Лондон', 'Париж', 'Нью-Йорк', 'Москва', 'Оттава'],
 }
 
 renderQuestion(1, testsData.firstTestQuestion, testsData.firstTestAnswers)
 renderQuestion(2, testsData.secondTestQuestion, testsData.secondTestAnswers)
 renderQuestion(3, testsData.thirdTestQuestion, testsData.thirdTestAnswers)
 renderQuestion(4, testsData.fourthTestQuestion, testsData.fourthTestAnswers, 'height-40px')
+renderQuestion(5, testsData.fifthTestQuestion, testsData.fifthTestAnswers, 'color-label')
+renderQuestion(6, testsData.sixthTestQuestion, testsData.sixthTestAnswers, 'color-label')
+renderQuestion(7, testsData.seventhTestQuestion, testsData.seventhTestAnswers, 'height-40px')
