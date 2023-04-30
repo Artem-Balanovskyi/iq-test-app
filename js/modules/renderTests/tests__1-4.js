@@ -1,10 +1,9 @@
-export function renderQuestion(questionNumber, question, answersArray, param) {
-	
+export function renderQuestion(questionNumber, question, answersArray, ...param) {
 	const test = document.querySelector(`.question-${questionNumber}`)
 	
-	// Rendering for questions 1-4, 7:
+	// Rendering for questions 1-4, 7, 9:
 	
-	if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7) {
+	if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7 || questionNumber === 9) {
 		test.innerHTML = `
 											<div class="test__question">
 														${question}
@@ -40,13 +39,24 @@ export function renderQuestion(questionNumber, question, answersArray, param) {
 											`
 	}
 	
+	if (questionNumber === 10) {
+		test.innerHTML = `
+											<div class="test__question mb-20px font-size-18px">
+                            ${question}
+                        </div>
+                        <div class="tests__test-10__img-container"></div>
+                        ${renderAllAnswers(questionNumber, 'test__answer')}
+											`
+	}
+	
+	
 	
 	function renderAllAnswers(questionNumber, labelClassName) {
 		let html = ''
 		
 		answersArray.forEach((answer, index) => {
 			let htmlSegment = `
-															<label class="${labelClassName} ${param}">
+															<label class="${labelClassName} ${param[0]}">
                             	<input type="checkbox"
                                    value="${answer}"
                                    class="test__answer-checkbox"
@@ -63,16 +73,17 @@ export function renderQuestion(questionNumber, question, answersArray, param) {
 	}
 	
 	function renderSingleAnswer(answer, param) {
-		if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7) {
-			return   `
-      		      <div class="test__answer-bg ${param}"></div>
-                <div class="test__answer-checkmark"></div>
+		
+		if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7 || questionNumber === 9 || questionNumber === 10) {
+			return `
+      		      <div class="test__answer-bg ${param[0]}"></div>
+                <div class="test__answer-checkmark ${param[1]}"></div>
                 <div class="test__answer-text">${answer}</div>
 						   `
 		}
 		
-		if (questionNumber > 4 && questionNumber < 7) {
-			return   `
+		if (questionNumber === 5 || questionNumber === 6) {
+			return `
 								<div class="test__color-box-active">
                 		<div class="test__color-box_${answer} test__color-box"></div>
                 </div>
@@ -80,7 +91,7 @@ export function renderQuestion(questionNumber, question, answersArray, param) {
 		}
 		
 		if (questionNumber === 8) {
-			return   `
+			return `
 								<div class="test__option-checkbox">
                 		<span>${answer}</span>
                 </div>
