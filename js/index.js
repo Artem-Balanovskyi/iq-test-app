@@ -26,6 +26,14 @@ const testsData = {
 	sixthTestAnswers: ['grey', 'light-blue', 'brown', 'green', 'black', 'red', 'violet', 'yellow', 'blue'],
 	seventhTestQuestion: `<p>Какой из городов <br> лишний?</p>`,
 	seventhTestAnswers: ['Вашингтон', 'Лондон', 'Париж', 'Нью-Йорк', 'Москва', 'Оттава'],
+	eighthTestQuestion: `<p>Выберите правильную фигуру </p><p>из четырёх пронумерованных.</p>`,
+	eighthTestAnswers: ['1', '2', '3', '4'],
+	ninthTestQuestion: `<p>Вам привычнее и важнее:</p>`,
+	ninthTestAnswers: [
+		`<p>Наслаждаться</p><p>каждой минутой</p><p>проведенного времени</p>`,
+		`<p>Быть устремленными</p><p>мыслями в будущее</p>`,
+		`<p>Учитывать в ежедневной</p><p>практике прошлый опыт</p>`
+	],
 }
 
 renderQuestion(1, testsData.firstTestQuestion, testsData.firstTestAnswers)
@@ -35,3 +43,5 @@ renderQuestion(4, testsData.fourthTestQuestion, testsData.fourthTestAnswers, 'he
 renderQuestion(5, testsData.fifthTestQuestion, testsData.fifthTestAnswers, 'color-label')
 renderQuestion(6, testsData.sixthTestQuestion, testsData.sixthTestAnswers, 'color-label')
 renderQuestion(7, testsData.seventhTestQuestion, testsData.seventhTestAnswers, 'height-40px')
+renderQuestion(8, testsData.eighthTestQuestion, testsData.eighthTestAnswers)
+// renderQuestion(9, testsData.ninthTestQuestion, testsData.ninthTestAnswers, 'height-78px', 'mr-15px')
