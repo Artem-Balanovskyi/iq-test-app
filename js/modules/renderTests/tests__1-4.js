@@ -39,6 +39,8 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
 											`
 	}
 	
+	// Rendering for questions 10:
+	
 	if (questionNumber === 10) {
 		test.innerHTML = `
 											<div class="test__question mb-20px font-size-18px">
@@ -49,7 +51,21 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
 											`
 	}
 	
+	// Rendering for questions 11:
 	
+	if (questionNumber === 11) {
+		test.innerHTML = `
+
+											<div class="test__question mb-20px">
+                            ${question}
+                      </div>
+                      <div class="tests__test-11__img-container"></div>
+                      <div class="tests__test-11__separator"></div>
+                      <div class="tests__test-11__grid-container">
+													${renderAllAnswers(questionNumber, 'test__option-label')}
+											</div>
+											`
+	}
 	
 	function renderAllAnswers(questionNumber, labelClassName) {
 		let html = ''
@@ -90,7 +106,7 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
 							 `
 		}
 		
-		if (questionNumber === 8) {
+		if (questionNumber === 8 || questionNumber === 11) {
 			return `
 								<div class="test__option-checkbox">
                 		<span>${answer}</span>

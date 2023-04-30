@@ -36,8 +36,7 @@ const testsData = {
 											приятен:</p>`,
 	sixthTestAnswers: ['grey', 'light-blue', 'brown', 'green', 'black', 'red', 'violet', 'yellow', 'blue'],
 	
-	seventhTestQuestion: `<p>Какой из городов<br>
-												лишний?</p>`,
+	seventhTestQuestion: `<p>Какой из городов<br>лишний?</p>`,
 	seventhTestAnswers: ['Вашингтон', 'Лондон', 'Париж', 'Нью-Йорк', 'Москва', 'Оттава'],
 	
 	eighthTestQuestion: `<p>Выберите правильную фигуру </p>
@@ -55,6 +54,9 @@ const testsData = {
                       <p>больше подходит к этому</p>
                       <p>геометрическому изображению:</p>`,
 	tenthTestAnswers: ['Оно остроконечное', 'Оно устойчиво', 	`<p>Оно-находится в</p><p>состоянии равновесия</p>`],
+	
+	eleventhTestQuestion: `<p>Вставьте подходящее <br>число</p>`,
+	eleventhTestAnswers: ['34', '36', '53', '44', '66', '42'],
 }
 
 renderQuestion(1, testsData.firstTestQuestion, testsData.firstTestAnswers)
@@ -67,3 +69,4 @@ renderQuestion(7, testsData.seventhTestQuestion, testsData.seventhTestAnswers, '
 renderQuestion(8, testsData.eighthTestQuestion, testsData.eighthTestAnswers)
 renderQuestion(9, testsData.ninthTestQuestion, testsData.ninthTestAnswers, 'height-78px', 'mr-15px')
 renderQuestion(10, testsData.tenthTestQuestion, testsData.tenthTestAnswers)
+renderQuestion(11, testsData.eleventhTestQuestion, testsData.eleventhTestAnswers)
