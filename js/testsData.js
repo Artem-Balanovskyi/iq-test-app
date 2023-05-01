@@ -16,7 +16,7 @@ export const data = [
 	},
 	{
 		questionNumber: 4,
-		question: `<p>Продолжите числовой ряд:</p>
+		question: `<p>Продолжите числовой ряд:<br></p>
                      <p>18 20 24 32</p>`,
 		answers: ['62', '48', '74', '57', '60', '77']
 	},
