@@ -4,7 +4,7 @@ const resultsButton = document.querySelector('.results__button-wrap')
 export async function renderResults() {
 	document.querySelector('.results__button-wrap').style.marginBottom = '15px'
 	
-	let data = await fetchResults();
+	let data = await fetchResults()
 	let html = ''
 	
 	for (let [key, value] of Object.entries(data)) {
@@ -15,7 +15,7 @@ export async function renderResults() {
 															<hr>
                        			  </div>`
 		
-		html += htmlSegment;
+		html += htmlSegment
 	}
 	
 	resultsButton.innerHTML = '<p>Ваш результат:</p>'

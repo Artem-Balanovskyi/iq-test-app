@@ -41,7 +41,6 @@ export function showResultsBlock() {
 	showElements(headerResultBlockTitle)
 	activateBlocks(resultsBlock)
 	
-	console.log(`index: ${index}`)
 	if (index < 2) {
 		countdownTimer("results__timer", 10, 0);
 		index++
