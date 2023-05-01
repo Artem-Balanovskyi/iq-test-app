@@ -1064,8 +1064,6 @@ img {
 /*                                           Results block styles end                         */
 
 /* Media start */
-/* Media end */
-
 
 @media screen and (max-height: 568px) {
     .footer {
@@ -1087,7 +1085,49 @@ img {
         max-width: 414px;
     }
 
-    .wrapper {
-        font-size: 2em;
+    .header__test-block-title {
+        left: 27%;
     }
+
+    .header__test-block-title p {
+        font-size: 17px;
+    }
+
+    .test__question,
+    .test__answer-text {
+        font-size: 25px;
+    }
+
+    .test__option-checkbox {
+        height: 60px;
+        width: 60px;
+
+    }
+
+    .test__option-checkbox span {
+        font-size: 25px;
+    }
+
+    .test__next-test-button {
+        font-size: 22px;
+    }
+
+    .loading-block {
+        width: 100%;
+    }
+
+    .test__loading-block__title p {
+        font-size: 30px;
+    }
+
+    .tests__loading-block__text-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tests__loading-block__text-box p {
+        font-size: 19px;
+    }
+
+    /* Media end */
 }
