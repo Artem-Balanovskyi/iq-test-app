@@ -1,18 +1,19 @@
-export function renderQuestion(questionNumber, question, answersArray, ...param) {
+export function renderTests(questionNumber, question, answersArray, ...param) {
+	
 	const test = document.querySelector(`.question-${questionNumber}`)
 	
-	// Rendering for questions 1-4, 7, 9:
+	// Rendering for tests 1-4, 7, 9:
 	
 	if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7 || questionNumber === 9) {
 		test.innerHTML = `
 											<div class="test__question">
 														${question}
 											</div>
-											${renderAllAnswers(questionNumber, 'test__answer')}
+											${renderCheckboxes(questionNumber, 'test__answer')}
 											`
 	}
 	
-	// Rendering for questions 5-6:
+	// Rendering for tests 5 & 6:
 	
 	if (questionNumber === 5 || questionNumber === 6) {
 		test.innerHTML = `
@@ -20,26 +21,32 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
                             ${question}
                       </div>
                       <div class="test__grid-container">
-											${renderAllAnswers(questionNumber, 'test__answer')}
+											${renderCheckboxes(questionNumber, 'test__answer')}
 											</div>
 											`
 	}
 	
-	// Rendering for questions 8:
+	// Rendering for tests 8 & 11:
 	
-	if (questionNumber === 8) {
+	if (questionNumber === 8 || questionNumber === 11) {
 		test.innerHTML = `
 											<div class="test__question mb-20px">
                             ${question}
                       </div>
-                      <div class="tests__test-8__img-container"></div>
-                      <div class="tests__test-8__grid-container">
-													${renderAllAnswers(questionNumber, 'test__option-label')}
+                      <div class="tests__test-${questionNumber}__img-container"></div>
+                      ${isThereSeparator(questionNumber)}
+                      <div class="tests__test-${questionNumber}__grid-container">
+													${renderCheckboxes(questionNumber, 'test__option-label')}
 											</div>
 											`
+		
+		function isThereSeparator(questionNumber) {
+			if (questionNumber === 11) return `<div class="tests__test-11__separator"></div>`
+			else return ``
+		}
 	}
 	
-	// Rendering for questions 10:
+	// Rendering for tests 10:
 	
 	if (questionNumber === 10) {
 		test.innerHTML = `
@@ -47,27 +54,12 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
                             ${question}
                         </div>
                         <div class="tests__test-10__img-container"></div>
-                        ${renderAllAnswers(questionNumber, 'test__answer')}
+                        ${renderCheckboxes(questionNumber, 'test__answer')}
 											`
 	}
 	
-	// Rendering for questions 11:
 	
-	if (questionNumber === 11) {
-		test.innerHTML = `
-
-											<div class="test__question mb-20px">
-                            ${question}
-                      </div>
-                      <div class="tests__test-11__img-container"></div>
-                      <div class="tests__test-11__separator"></div>
-                      <div class="tests__test-11__grid-container">
-													${renderAllAnswers(questionNumber, 'test__option-label')}
-											</div>
-											`
-	}
-	
-	function renderAllAnswers(questionNumber, labelClassName) {
+	function renderCheckboxes(questionNumber, labelClassName) {
 		let html = ''
 		
 		answersArray.forEach((answer, index) => {
@@ -80,7 +72,7 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
                                    onclick="window._allImportedFunctions.setOnlyOneCheckbox(this.id)"
                                    
                             	>
-                            	${renderSingleAnswer(answer, param)}
+                            	${renderAnswer(answer, param)}
                        				</label>
 															`
 			html += htmlSegment
@@ -88,30 +80,33 @@ export function renderQuestion(questionNumber, question, answersArray, ...param)
 		return html
 	}
 	
-	function renderSingleAnswer(answer, param) {
+	function renderAnswer(answer, param) {
 		
+		// Rendering for tests 1-4, 7, 9, & 10:
 		if (questionNumber > 0 && questionNumber < 5 || questionNumber === 7 || questionNumber === 9 || questionNumber === 10) {
 			return `
-      		      <div class="test__answer-bg ${param[0]}"></div>
-                <div class="test__answer-checkmark ${param[1]}"></div>
-                <div class="test__answer-text">${answer}</div>
-						   `
+      		    <div class="test__answer-bg ${param[0]}"></div>
+              <div class="test__answer-checkmark ${param[1]}"></div>
+              <div class="test__answer-text">${answer}</div>
+						 `
 		}
 		
+		// Rendering for tests 5 & 6:
 		if (questionNumber === 5 || questionNumber === 6) {
 			return `
-								<div class="test__color-box-active">
-                		<div class="test__color-box_${answer} test__color-box"></div>
-                </div>
-							 `
+						  <div class="test__color-box-active">
+                	<div class="test__color-box_${answer} test__color-box"></div>
+              </div>
+						 `
 		}
 		
+		// Rendering for tests 8 & 11:
 		if (questionNumber === 8 || questionNumber === 11) {
 			return `
-								<div class="test__option-checkbox">
-                		<span>${answer}</span>
-                </div>
-							 `
+							<div class="test__option-checkbox">
+                	<span>${answer}</span>
+              </div>
+						 `
 		}
 	}
 	
