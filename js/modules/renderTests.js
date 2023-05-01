@@ -1,4 +1,5 @@
-export function renderQuestion(questionNumber, question, answersArray, ...param) {
+export function renderTests(questionNumber, question, answersArray, ...param) {
+	
 	const test = document.querySelector(`.question-${questionNumber}`)
 	
 	// Rendering for tests 1-4, 7, 9:

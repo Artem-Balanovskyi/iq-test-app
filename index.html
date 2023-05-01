@@ -24,14 +24,17 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#main" onclick="window._allImportedFunctions.showMainBlock()" class="header__link js-scroll">Главная</a>
+                            <a href="#main" onclick="window._allImportedFunctions.showMainBlock()"
+                               class="header__link js-scroll">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-info" onclick="window._allImportedFunctions.showMainBlock()" class="header__link js-scroll">Информация о
+                            <a href="#test-info" onclick="window._allImportedFunctions.showMainBlock()"
+                               class="header__link js-scroll">Информация о
                                 тесте</a>
                         </li>
                         <li class="header__item">
-                            <a onclick="window._allImportedFunctions.showTestsOrResults()" class="header__link yellow">пройти тест</a>
+                            <a onclick="window._allImportedFunctions.showTestsOrResults()" class="header__link yellow">пройти
+                                тест</a>
                         </li>
                     </ul>
                     <div class="header__nav-close"></div>
@@ -199,51 +202,7 @@
                 <div class="test__progress-bar-total">
                     <div class="test__progress-bar-passed"></div>
                 </div>
-
-                <div class="test-1">
-                    <div class="question-wrap question-1"></div>
-                </div>
-
-                <div class="test-2 hidden">
-                    <div class="question-wrap question-2"></div>
-                </div>
-
-                <div class="test-3 hidden">
-                    <div class="question-wrap question-3"></div>
-                </div>
-
-                <div class="test-4 hidden">
-                    <div class="question-wrap question-4"></div>
-                </div>
-
-                <div class="test-5 hidden">
-                    <div class="question-wrap question-5"></div>
-                </div>
-
-                <div class="test-6 hidden">
-                    <div class="question-wrap question-6"></div>
-                </div>
-
-                <div class="test-7 hidden">
-                    <div class="question-wrap question-7"></div>
-                </div>
-
-                <div class="test-8 hidden">
-                    <div class="question-wrap question-8"></div>
-                </div>
-
-                <div class="test-9 hidden">
-                    <div class="question-wrap question-9"></div>
-                </div>
-
-                <div class="test-10 hidden">
-                    <div class="question-wrap question-10"></div>
-                </div>
-
-                <div class="test-11 hidden">
-                    <div class="question-wrap question-11"></div>
-                </div>
-
+                <div class="tests__container"></div>
                 <!--                Loading block-->
 
                 <div class="loading-block hidden">
@@ -256,7 +215,6 @@
                             <p>Определение стиля мышления...........</p>
                             <p>........................................................</p>
                         </div>
-
                     </div>
                 </div>
 
@@ -308,7 +266,8 @@
                         <p><span id="results__timer">10:00</span> минут</p>
                     </div>
                 </div>
-                <button class="results__button-wrap" type="submit" onclick="window._allImportedFunctions.renderResults()">
+                <button class="results__button-wrap" type="submit"
+                        onclick="window._allImportedFunctions.renderResults()">
                     <div class="results__button">
                         <p>Позвонить и прослушать</p>
                         <p>результат </p>

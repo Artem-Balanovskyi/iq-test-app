@@ -1,4 +1,3 @@
-import {index} from "./switchToNextTest.js"
 const resultsButton = document.querySelector('.results__button-wrap')
 const resultsButtonText = document.querySelector('.results__button')
 
