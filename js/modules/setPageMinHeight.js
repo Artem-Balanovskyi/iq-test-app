@@ -5,9 +5,9 @@ const mainBlock = document.querySelector('.main-block')
 let footerBottomStyle = 0
 
 export function setPageMinHeight() {
-	testsWrapper.style.minHeight = `${screen.height}px`
-	// mainBlock.style.maxHeight = `${1928}px`;
+	testsWrapper.style.minHeight = `${window.innerHeight}px`
+	mainBlock.style.maxHeight = `${1928}px`;
 	if (screen.height >= 639) {
-		results.style.minHeight = `${screen.height + 21}px`
+		results.style.minHeight = `${window.innerHeight + 21}px`
 	}
 }
