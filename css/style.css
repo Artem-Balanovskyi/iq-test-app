@@ -1071,12 +1071,8 @@ img {
 
 }
 
-@media screen and (min-width: 375px) and (max-width: 414px) {
 
-
-}
-
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 375px) {
     .wrapper,
     .header__bar,
     .header__wrapper,
@@ -1103,7 +1099,7 @@ img {
 
     .test__question,
     .test__answer-text {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .test__option-checkbox {
