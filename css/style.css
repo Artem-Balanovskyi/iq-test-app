@@ -45,7 +45,7 @@ img {
     display: block;
 }
 
-/*Header styles start*/
+/* Header styles start */
 .header__basement {
     height: 46px;
 }
@@ -189,16 +189,16 @@ img {
     bottom: 0;
 }
 
-/*Header styles end*/
+/* Header styles end */
 
 
-/*                                           Main block styles start                         */
+/* Main block styles start */
 
 .main-block {
     max-height: 1928px;
 }
 
-/*Proposal styles start*/
+/* Proposal styles start */
 
 .proposal {
     display: flex;
@@ -281,9 +281,9 @@ img {
     letter-spacing: 0.05em;
 }
 
-/*Proposal styles end*/
+/* Proposal styles end */
 
-/*Quote styles start*/
+/* Quote styles start */
 .shift-content {
     transform: translateY(-110px);
 }
@@ -334,9 +334,9 @@ img {
     bottom: 33px;
 }
 
-/*Quote styles end*/
+/* Quote styles end */
 
-/*Advice styles start*/
+/* Advice styles start */
 
 .advice__wrapper {
     display: flex;
@@ -395,9 +395,9 @@ img {
     margin: 0 auto;
 }
 
-/*Advice styles end*/
+/* Advice styles end */
 
-/*Details styles start*/
+/* Details styles start */
 
 .details__wrapper {
     background: url(../img/details__bg-img.png) no-repeat center;
@@ -521,11 +521,11 @@ img {
     margin-bottom: 4px;
 }
 
-/*Details styles end*/
+/* Details styles end */
 
-/*                                           Main block styles end                         */
+/* Main block styles end */
 
-/*                                           Tests block styles start                         */
+/* Tests block styles start */
 
 .tests__test-wrapper {
     width: 100%;
@@ -868,9 +868,9 @@ img {
     letter-spacing: 0.05em;
 }
 
-/*                                           Tests block styles end                         */
+/* Tests block styles end */
 
-/*                                           Results block styles start                         */
+/* Results block styles start */
 
 
 .results-block {
@@ -1060,7 +1060,7 @@ img {
 }
 
 
-/*                                           Results block styles end                         */
+/* Results block styles end */
 
 /* Media start */
 
@@ -1102,10 +1102,19 @@ img {
         font-size: 23px;
     }
 
-    .test__option-checkbox {
-        height: 60px;
-        width: 60px;
+    .test__color-box-active {
+        height: 100px;
+        width: 100px;
+    }
 
+    .test__color-box {
+        height: 88px;
+        width: 88px;
+    }
+
+    .test__option-checkbox {
+        height: 55px;
+        width: 55px;
     }
 
     .test__option-checkbox span {
@@ -1136,6 +1145,49 @@ img {
     .test__next-test-button-wrap {
         bottom: 50px;
     }
+
+    .results__text-block-1 p,
+    .results__button p
+
+    {
+        font-size: 20px;
+    }
+
+    .results__text-block-2 p {
+        font-size: 18px;
+    }
+
+    .results__text-block-3 p,
+    .results__text-block-5 p span
+    {
+        font-size: 22px;
+    }
+
+
+    .results__text-block-4-wrap {
+        height: 170px;
+        width: 336px;
+    }
+
+    .results__text-block-4 p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+
+    .results__text-block-5 {
+        width: 336px;
+    }
+
+    .results__text-block-5 p {
+        font-size: 15px;
+    }
+
+    .results__button-wrap {
+        height: 112px;
+        width: 345px;
+    }
+
 
     /* Media end */
 }
