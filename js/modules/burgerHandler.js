@@ -3,9 +3,6 @@ export function burgerHandler() {
 	const headerMenu = document.querySelector('.header__nav')
 	const menuCloseItem = document.querySelector('.header__nav-close')
 	const menuLinks = document.querySelectorAll('.header__link')
-	const mainBlock = document.querySelector('.main-block')
-	const testsBlock = document.querySelector('.tests-block')
-	const resultsBlock = document.querySelector('.results-block')
 	
 	
 	burgerItem.addEventListener('click', () => {
@@ -25,18 +22,9 @@ export function burgerHandler() {
 	
 	function setActiveBlockHeaderMenuHeight() {
 		const headerMenu = document.querySelector('.header__nav')
+		const activeBlock = document.querySelector('.active')
 		
-		if (mainBlock.classList.contains('active')) {
-			headerMenu.style.height = '100%'
-		}
-		if (testsBlock.classList.contains('active')) {
-			const testsBlockHeight = document.querySelector('.tests__test-wrapper').clientHeight
-			headerMenu.style.height = `${testsBlockHeight}px`
-		}
-		if (resultsBlock.classList.contains('active')) {
-			const resultsBlockHeight = document.querySelector('.results').clientHeight
-			headerMenu.style.height = `${resultsBlockHeight}px`
-		}
+		headerMenu.style.height = `${activeBlock.clientHeight}px`
 	}
 }
 

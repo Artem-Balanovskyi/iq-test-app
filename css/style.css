@@ -195,7 +195,7 @@ img {
 /* Main block styles start */
 
 .main-block {
-    max-height: 1928px;
+    /*max-height: 1928px;*/
 }
 
 /* Proposal styles start */
@@ -557,7 +557,7 @@ img {
     border-radius: 11px;
 }
 
-.tests__container {
+.test__container {
     width: 100%;
 }
 
@@ -1065,6 +1065,7 @@ img {
 /* Media start */
 
 @media screen and (max-height: 568px) {
+
     .footer {
         bottom: 71px;
     }
@@ -1078,6 +1079,10 @@ img {
     .header__wrapper,
     .header__nav {
         max-width: 414px;
+    }
+
+    .header__burger {
+        margin-right: 15px;
     }
 
     .header__test-block-title {
