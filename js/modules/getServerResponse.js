@@ -1,7 +1,6 @@
-const responseDataBlock = document.querySelector('.results__response-data')
-const resultsButton = document.querySelector('.results__button-wrap')
-
-export async function renderResults() {
+export async function getServerResponse() {
+	const responseDataBlock = document.querySelector('.results__response-data')
+	const resultsButton = document.querySelector('.results__button-wrap')
 	document.querySelector('.results__button-wrap').style.marginBottom = '15px'
 	
 	let data = await fetchResults()
@@ -25,6 +24,7 @@ export async function renderResults() {
 }
 
 async function fetchResults() {
+	const responseDataBlock = document.querySelector('.results__response-data')
 	let url = 'https://swapi.dev/api/people/1'
 	
 	try {

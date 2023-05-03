@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/site.webmanifest">
+        <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="img/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=PT+Serif:wght@400;700&family=Roboto:wght@300;400;500;900&family=Yeseva+One&display=swap"
@@ -27,7 +27,6 @@
 
 <div class="wrapper">
 
-    <!--Header start-->
     <header class="header">
         <div class="header__basement">
             <div class="header__wrapper">
@@ -35,15 +34,15 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#main" onclick="window._allImportedFunctions.showMainBlock()"
+                            <a href="#main" onclick="window._allImportedFunctions.renderMainBlock()"
                                class="header__link js-scroll">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="#test-info" onclick="window._allImportedFunctions.showMainBlock()"
+                            <a href="#test-info" onclick="window._allImportedFunctions.renderMainBlock()"
                                class="header__link js-scroll">Информация о тесте</a>
                         </li>
                         <li class="header__item">
-                            <a onclick="window._allImportedFunctions.showTestsOrResults()" class="header__link yellow">
+                            <a onclick="window._allImportedFunctions.renderTestsBlock(0)" class="header__link yellow">
                                 пройти тест</a>
                         </li>
                     </ul>
@@ -56,231 +55,14 @@
                         <span class="burger__line burger__line_second"></span>
                         <span class="burger__line burger__line_third"></span>
                     </div>
-                    <div class="header__brain-img hidden"></div>
-                    <div class="header__test-block-title hidden"><p>тест на определение IQ</p></div>
-                    <div class="header__result-block-title hidden"><p>Готово!</p></div>
                 </div>
 
             </div>
         </div>
     </header>
-    <!--Header end-->
 
+    <main class="main"></main>
 
-    <main class="main">
-
-        <!--Main block start-->
-        <section class="main-block active" id="main">
-
-            <!--Proposal start-->
-            <div class="proposal">
-                <div class="proposal__text-block-1">
-                    <p>Пройдите точный и быстрый</p>
-                </div>
-                <div class="proposal__text-block-2">
-                    <p>тест на <br> определение <br> iq</p>
-                </div>
-                <div class="proposal__button-wrap">
-                    <input class="proposal__button pass-test-button"
-                           type="button"
-                           value="пройти тест"
-                           onclick="window._allImportedFunctions.showTestsOrResults()"
-                    >
-                </div>
-                <div class="proposal__text-block-3">
-                    <p><span>И получите рекомендации <br>
-                    по развитию своего интеллекта <br> </span>
-                        и улучшению финансового <br>
-                        благосостояния и личной жизни</p>
-                </div>
-                <div class="proposal__arrow ">
-                    <a href="#test-info" class="proposal__arrow__link js-scroll"></a>
-                </div>
-                <div class="proposal__details">
-                    <a href="#test-info" class="proposal__details__link js-scroll">Подробнее</a>
-                </div>
-            </div>
-            <!--Proposal end-->
-
-
-            <div class="shift-content wrapper">
-
-                <!--Quote start-->
-                <div class="quote__wrapper" id="test-info">
-                    <div class="quote__container">
-                        <div class="quote__img-top"></div>
-                        <div class="quote__text-block">
-                            <p>Профессиональный</p>
-                            <p>IQ-тест позволяет не</p>
-                            <p>только определить</p>
-                            <p>коэффициент вашего</p>
-                            <p>интеллекта,</p>
-                            <p>но и выработать список</p>
-                            <p>рекомендаций для</p>
-                            <p>повышения этого</p>
-                            <p>показателя.</p>
-                        </div>
-                        <div class="quote__img-bottom"></div>
-                    </div>
-                </div>
-                <!--Quote end-->
-
-                <!--Advise start-->
-                <div class="advice__wrapper">
-                    <div class="advice__text-block">
-                        <p>Также по результатам теста</p>
-                        <p><span class="uppercase">вы получите</span> подробные</p>
-                        <p><span class="uppercase">советы</span> по определению наиболее</p>
-                        <p>перспективной <span class="uppercase">для вашего</span></p>
-                        <p><span class="uppercase">типа</span> <span>интеллекта</span><span
-                                class="uppercase"> сферы</span></p>
-                        <p><span class="uppercase">деятельности,</span></p>
-                        <p>которая принесет вам скорейший</p>
-                        <p>финансовый результат.</p>
-                    </div>
-                    <div class="advice__image"></div>
-                    <div class="advice__button-wrap">
-                        <input class="advice__button pass-test-button"
-                               type="button"
-                               value="пройти тест"
-                               onclick="window._allImportedFunctions.showTestsOrResults()"
-                        >
-                    </div>
-                </div>
-                <!--Advice end-->
-
-                <!--Details start-->
-                <div class="details__wrapper">
-                    <div class="details__lightning-right"></div>
-                    <div class="details__lightning-left"></div>
-                    <div class="details__text-blocks">
-                    <div class="details__text-block-1">
-                        <p>Прохождение теста займет у</p>
-                        <p>вас не более <span>12 минут</span>, а его</p>
-                        <p>результаты вы сможете</p>
-                        <p><span>использовать всю жизнь.</span></p>
-                    </div>
-                    <div class="details__text-block-2">
-                        <p>Профессиональная</p>
-                        <p>интерпретация и детально</p>
-                        <p><span>проработанные</span></p>
-                        <p><span>рекомендации</span> позволят вам</p>
-                        <p>качественно <span>изменить все</span></p>
-                        <p><span>аспекты своей жизни:</span> от</p>
-                        <p>финансового до любовного.</p>
-                    </div>
-                    </div>
-                    <div class="details__button-wrap">
-                        <input class="details__button pass-test-button"
-                               type="button"
-                               value="пройти тест"
-                               onclick="window._allImportedFunctions.showTestsOrResults()">
-                    </div>
-                    <div class="details__copyright">
-                        <div class="details__copyright-img">
-                            <div class="details__copyright-char"></div>
-                        </div>
-                        <div class="details__copyright-year">
-                            <p>2019</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Details end  -->
-
-            </div>
-        </section>
-        <!--Main block end-->
-
-        <!--Tests block start-->
-        <section class="tests-block hidden">
-            <div class="tests__test-wrapper">
-                <div class="test__progress-bar-total">
-                    <div class="test__progress-bar-passed"></div>
-                </div>
-                <div class="tests__container"></div>
-
-                <!--Loading block start-->
-                <div class="loading-block hidden">
-                    <div class="question-wrap">
-                        <div class="test__loading-block__title">
-                            <p>Обработка <br>результатов</p>
-                        </div>
-                        <div class="tests__loading-block__img-container"></div>
-                        <div class="tests__loading-block__text-box">
-                            <p>Определение стиля мышления...........</p>
-                            <p>........................................................</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Loading block end-->
-
-                <div class="test__next-test-button-wrap">
-                    <input class="test__next-test-button"
-                           type="button"
-                           value="далее"
-                           onclick="window._allImportedFunctions.switchToNextTest()"
-                           disabled
-                    >
-                </div>
-            </div>
-        </section>
-        <!--Tests block end-->
-
-        <!--Results block start-->
-        <section class="results-block hidden" id="results">
-            <div class="results">
-                <div class="results__text-block-1">
-                    <p>Ваш результат рассчитан:</p>
-                </div>
-                <div class="results__text-block-2">
-                    <p><span>Вы относитесь к 3%</span> респондентов, чей</p>
-                    <p>уровень интеллекта более чем на</p>
-                    <p>15 пунктов отличается от среднего в</p>
-                    <p>большую или меньшую сторону!</p>
-                </div>
-                <div class="results__call-us-now">
-                    <div class="results__text-block-3">
-                        <p>Скорее получите свой</p>
-                        <p>результат!</p>
-                    </div>
-                    <div class="results__text-block-4-wrap">
-                        <div class="results__text-block-4">
-                            <p>в целях защиты персональных</p>
-                            <p>данных результат теста, их</p>
-                            <p>подробная интерпретация и</p>
-                            <p>рекомендации доступны в виде</p>
-                            <p>голосового сообщения по звонку с</p>
-                            <p>вашего мобильного телефона</p>
-                        </div>
-                    </div>
-                    <div class="results__text-block-5">
-                        <p>Звоните скорее, запись доступна всего</p>
-                        <p><span id="results__timer">10:00</span> минут</p>
-                    </div>
-                </div>
-                <button class="results__button-wrap" type="submit"
-                        onclick="window._allImportedFunctions.renderResults()">
-                    <div class="results__button">
-                        <p>Позвонить и прослушать</p>
-                        <p>результат </p>
-                    </div>
-                </button>
-                <div class="results__response">
-                    <div class="results__response-data"></div>
-                </div>
-                <div class="results__lightning-right"></div>
-                <div class="results__lightning-left"></div>
-                <footer class="footer">
-                    <p>TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU</p>
-                    <p>DE DIVERTISMENT. PRIN FOLOSIREA LUI</p>
-                    <p>DECLARATI CA AVETI 18 ANI IMPLINITI.</p>
-                </footer>
-
-            </div>
-        </section>
-        <!--Results block end-->
-
-    </main>
 </div>
 <script type="module" src="js/index.js"></script>
 </body>

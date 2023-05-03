@@ -1,27 +1,22 @@
-import {showResultsBlock} from "./blockVisibility.js"
-import {hideElements, showElements} from "./helpers.js"
+import {renderTestWrapper} from "./render/testsBlock/renderTestWrapper.js"
+import {renderLoadingBlock} from "./render/testsBlock/renderLoadingBlock.js"
+import {renderResultsBlock} from "./render/renderResultsBlock.js"
+import {data} from "../testsData.js"
 
-const nextTestButton = document.querySelector('.test__next-test-button')
-const nextTestButtonWrap = document.querySelector('.test__next-test-button-wrap')
-const passedProgressBar = document.querySelector('.test__progress-bar-passed')
-
-export let index = 1
+let questionIndex = 1
 let usersTestAnswers = []
+
 export function switchToNextTest() {
+	const nextTestButton = document.querySelector('.test__next-test-button')
 	const allCheckboxesArray = document.querySelectorAll('.test__answer-checkbox')
-	const currentTest = document.querySelector(`.test-${index}`)
-	const nextTest = document.querySelector((`.test-${index + 1}`))
-	const loadingBlock = document.querySelector((`.loading-block`))
 	
-	if (index < 11) {
-		hideElements(currentTest)
-		showElements(nextTest)
+	if (questionIndex < data.length) {
+		renderTestWrapper(questionIndex)
 		nextTestButton.disabled = true
 		nextTestButton.classList.remove('enabled')
 	} else {
-		hideElements(currentTest, nextTestButtonWrap)
-		showElements(loadingBlock)
-		setTimeout(showResultsBlock, 5000)
+		renderLoadingBlock()
+		setTimeout(renderResultsBlock, 5000)
 	}
 	
 	allCheckboxesArray.forEach(checkbox => {
@@ -30,10 +25,12 @@ export function switchToNextTest() {
 			usersTestAnswers.push(answerRecord)
 		}
 	})
-	passedProgressBar.style.width = `${21.5 * (index + 1)}px`
-	index++
 	
-	if (index === 12) logUsersTestAnswers(usersTestAnswers)
+	const passedProgressBar = document.querySelector('.test__progress-bar-passed')
+	passedProgressBar.style.width = `${21.5 * (questionIndex + 1)}px`
+	questionIndex++
+	
+	if (questionIndex > data.length) logUsersTestAnswers(usersTestAnswers)
 	
 	function logUsersTestAnswers(usersTestAnswers) {
 		console.log(`User's test answers:`)
@@ -41,4 +38,9 @@ export function switchToNextTest() {
 			console.log(`${answer}`)
 		});
 	}
+	
+}
+
+export function restartTests() {
+	questionIndex = 1
 }
