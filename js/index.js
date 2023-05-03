@@ -7,7 +7,6 @@ import {renderTestsBlock} from "./modules/render/testsBlock/renderTestsBlock.js"
 
 window._allImportedFunctions = {renderMainBlock, renderTestsBlock, setOnlyOneCheckbox, switchToNextTest, renderResults: getServerResponse}
 
-
 renderMainBlock()
 window.onresize = setPageMinHeight
 
